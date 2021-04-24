@@ -4,7 +4,7 @@ label start:
     clippy "NEXT!"
 
     # fade from black
-    show mc normal
+    show mc normal at right
     "wha..."
     "*where the hell am I?*"
     "*why does it look like I'm in the backrooms?*"
@@ -36,6 +36,9 @@ label start:
             "don't take a shit on his desk":
                 clippy "come on now, I haven't got all day"
                 jump toShitOrNotToShit
+
+    show lust normal at left
+    "..."
 
     # Lust
     # Intro
