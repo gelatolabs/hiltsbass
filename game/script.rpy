@@ -9,10 +9,9 @@ label start:
     "*where the hell am I?*"
     "*why does it look like I'm in the backrooms?*"
     clippy "c'mon dude, my shift's supposed to end in five minutes, and I gotta get home to watch Desperate Housewives"
-    clippy "so hurry it up and tell me your name"
 
     python:
-        pname = renpy.input("Welcome to hell! Name?").strip()
+        pname = renpy.input("so hurry it up and tell me your name").strip()
 
     clippy "alright [pname], looks like you got creamed by a truck"
     mc "wha..."
