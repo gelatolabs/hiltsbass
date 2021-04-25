@@ -60,6 +60,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 1
+    call elevator
+
     "Level B2: Lust"
     play sound elevatorDing
     "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear her conversation."
@@ -105,6 +109,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 2
+    call elevator
+
     "Level B3: Gluttony"
     play sound elevatorDing
     "A faint ding indicates you have arrived at the next level. As the door opens you are overwhelmed by an extremely unpleasant odor and thick fog."
@@ -150,6 +158,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 3
+    call elevator
+
     "Level B4: Greed"
     #play sound kaching
     "The Hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
@@ -194,6 +206,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 4
+    call elevator
+
     "Level B5: Wrath"
     play sound elevatorDing
     scene bg wrath
@@ -239,6 +255,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 5
+    call elevator
+
     "Level B6: Heresy"
     play sound elevatorDing
     scene bg heresy
@@ -285,6 +305,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 6
+    call elevator
+
     "Level B7: Violence"
     play sound elevatorDing
     scene bg violence
@@ -297,6 +321,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 7
+    call elevator
+
     "Level B8: Fraud"
     play sound elevatorDing
     scene bg fraud
@@ -309,6 +337,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 8
+    call elevator
+
     "Level B9: Treachery"
     play sound elevatorDing
     scene bg treachery
@@ -323,6 +355,10 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+
+    $ difficulty = 9
+    call elevator
+    
     "Heaven"
     play sound elevatorDing
     scene bg heaven
