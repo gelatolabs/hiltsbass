@@ -48,6 +48,8 @@ image bg fraud     = "/images/bg/fraud.png"
 image bg treachery = "/images/bg/treachery.png"
 image bg heaven    = "/images/bg/heaven.png"
 
+define audio.fire = "/sound/music/fire.ogg"
+
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
 define audio.elevatorDing = "/sound/sfx/elevatorDing.ogg"
 define audio.cannibal     = "/sound/sfx/cannibal.ogg"
@@ -57,3 +59,9 @@ transform left:
 
 transform right:
     pos (0.6, 0.22)
+
+transform menuLeft:
+    pos (0, 0.36)
+
+transform menuRight:
+    pos (0.6, 0.48)
