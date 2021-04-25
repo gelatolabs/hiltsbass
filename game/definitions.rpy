@@ -46,6 +46,7 @@ image bg violence  = "/images/bg/violence.png"
 image bg fraud     = "/images/bg/fraud.png"
 image bg treachery = "/images/bg/treachery.png"
 image bg heaven    = "/images/bg/heaven.png"
+image bg elevator  = "/images/elevator/bg.png"
 
 define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
