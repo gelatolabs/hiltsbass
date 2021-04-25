@@ -49,19 +49,19 @@ label start:
     "An underling escorts you into the hellevator and down to level B2..."
 
     scene bg black with dissolve
-    #play sound elevatorOpen
+    play sound elevatorOpen
     "Level B2: Lust"
-    #play sound elevatorDing
+    play sound elevatorDing
     "The hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear his conversation."
     scene bg lust with dissolve
     show mc lust at right
     show lust normal at left
 
-    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge if you know what I mean!"  
+    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge if you know what I mean!"
     "She slams the phone down and greets you in a sultry voice."
-    lust "What can I do for you honey? Is it getting hot in here or is it just me? I have some really interesting new content that looks like it might just fit you well!"  
+    lust "What can I do for you honey? Is it getting hot in here or is it just me? I have some really interesting new content that looks like it might just fit you well!"
     "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
-    lust "Choose your poison, you nasty little freak!"  
+    lust "Choose your poison, you nasty little freak!"
     "You slowly spread them out and get an unsettling feeling when you realize the pages are sticky. You carefully inspect the covers: (\"Fun with Buns\", \"Deep 'n' Cheep\", \"Blowin' for Owin\", and \"Smokey or Chokey BBQ\"). How shall you proceed?"
 
     menu:
@@ -75,15 +75,15 @@ label start:
             "It appears as though the stickiness is of human origin. You lick your lips and decide there is nothing more to be said or done here and proceed back to the hellevator."
 
     scene bg black with dissolve
-    #play sound elevatorOpen
+    play sound elevatorOpen
     "Level B3: Gluttony"
-    #play sound elevatorDing
+    play sound elevatorDing
     "A faint ding indicates you have arrived at the next level. As the door opens you are overwhelmed by an extremely unpleasant odor and thick fog."
     scene bg gluttony with dissolve
     show mc gluttony at right
     show gluttony normal at left
 
-    mc "coughs and chokes"
+    mc "*coughs and chokes*"
     gluttony "A'hoy there matey, hope you worked up an appetite!"
     "The voice startles you and as the fog clears it reveals the source: a human body with a pig's head, donning a pirate hat and an eye patch at a hot dog stand." #insert picture of scene
     mc "I'm absolutely famished, what's on the menu?"
@@ -101,7 +101,9 @@ label start:
             pass # rickroll
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B4: Greed"
+    play sound elevatorDing
     "The hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
     "You feel a chill down your spine as you glance at what sits before you behind a card table."
     scene bg greed with dissolve
@@ -124,30 +126,54 @@ label start:
             "If only they had seen it coming, maybe you wouldn't be in this mess! RIP"
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B5: Wrath"
+    play sound elevatorDing
     scene bg wrath with dissolve
+    show mc wrath at right
+    show wrath normal at left
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B6: Heresy"
+    play sound elevatorDing
     scene bg heresy with dissolve
+    show mc heresy at right
+    show heresy normal at left
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B7: Violence"
+    play sound elevatorDing
     scene bg violence with dissolve
+    show mc violence at right
+    show violence normal at left
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B8: Fraud"
+    play sound elevatorDing
     scene bg fraud with dissolve
+    show mc fraud at right
+    show fraud normal at left
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Level B9: Treachery"
+    play sound elevatorDing
     scene bg treachery with dissolve
+    show mc treachery at right
+    show satan normal at left
 
     # Ending A: Kill Satan
 
     scene bg black with dissolve
+    play sound elevatorOpen
     "Heaven"
+    play sound elevatorDing
     scene bg heaven with dissolve
+    show mc treachery at right
+    show god normal at left
 
     # Ending B: Kill God
 
