@@ -83,26 +83,26 @@ label start:
     show lust normal at menuLeft
     with ease
     menu:
-        "Steal the magazines and run back into the Hellevator.": #lose
+        "Choose Fun with Buns to satisfy your appetite & beyond.": #win
             show mc lust at right
             show lust normal at left
             with ease
-            "The Hellevator doors slam shut and you hear a voice: \"Hell is no place for common thieves!\""
-        "Bring the magazines to the restroom and take care of bidnazz.": #lose
+            "You grab the Fun with Buns magazine and head to the restroom to relieve yourself of some pressure.  Along the way you grab 3 bags of cheeseter's hawt fries."
+        "Choose Deep n cheep to get more bang for your buck.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "After relieving some tension you return the somewhat moister magazines to the desk and head back to the Hellevator."
-        "Donate the magazines to a box labelled charity.": #lose
+            "This magazine is half price but it should still get the job done.  That's what she said!"
+        "Choose Smokey or chokey because gag reflexes are foreign to you.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "The charity box glows with a pale yellow light. It engulfs you and pulls you back into the Hellevator."
-        "Lick the magazines to further investigate the source of the stickiness.": #win
+            "Oh yeah, the cover on this one is hot as hell and will really pump you up!"
+        "Choose Blowin for owin.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "It appears as though the stickiness is of human origin. You lick your lips and decide there is nothing more to be said or done here and proceed back to the Hellevator."
+            "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
 
     hide mc
     hide lust
@@ -137,16 +137,16 @@ label start:
             show gluttony normal at left
             with ease
             "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
-        "Huawei'n pizza: Experience a taste of the orient, all ingredients and information from authentic sources (8 slices). 1,000 calories per slice.": #lose
+        "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.": #lose
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "After downing the whole pizza you feel like you have somehow been violated and head back to the Hellevator."
-        "Juicy vegan bites: Meat of the highest quality, consisting solely of murderers who are vegan. 500 calories pers serving, gluten free.": #win
+            "After downing the whole pizza you feel like you have somehow violated someone's personal data and go back to the hellevator."
+        "Scalper scallops:  Special of the day, all you can scalp!!": #win
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "It doesn't taste quite right but somehow you feel healthier and your digestive tract springs into action. With renewed energy you sprint to the Hellevator."
+            "A fond memory of the riches you earned scalping video cards during a pandemic makes you feel warm and juicy inside."
         "Spring rolls: No ingredients are listed but strangely enough there is a music note.": #lose
             #play sound rickroll
             show mc gluttony at right
@@ -180,26 +180,28 @@ label start:
     show greed normal at menuLeft
     with ease
     menu:
-        "Jack: The Jack reminds you of a time you scalped video cards during a pandemic and had a good laugh about it.": #win
+        "Catapult:  The first card has an image of a catapult launching a poor traitorous soul into the fiery jaws of a massive hellhound.": #lose
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment." 
-        "Queen: The Queen brings back memories of your various adulterous escapades in VR.": #lose
+            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!" 
+        "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.": #lose
             show mc greed at right
             show greed normal at left
             with ease
-            "Upon choosing the Queen you realize the error of your ways and understand that things are only going up from here."
-        "King: The King elicits a time of great prosperity when you achieved great wealth from being the king of shoplifting prophylactics.": #lose
+            "Upon choosing the shield, a sense of goodness warms your heart.  You feel more virtuous and believe you have done something right."
+        "Gold:  The third card has a pot of gold with a leprechaun menacingly staring at it in obsession.": #lose
             show mc greed at right
             show greed normal at left
             with ease
-            "The extra small size was your biggest seller. Who knew such small things could lead to big profits? The Hellevator doors await your return for ascension"
-        "Ace: The Ace instantly refreshes your memories of purchasing nails at the hardware store for nefarious purposes.": #lose
+            "The gold card is hot to the touch and smells of greed. Haven't you been greedy enough for one day?"
+        "Sword:  The last card shows a blood-soaked sword wielded by a massive ogre, seemingly in a state of bloodlust.": #lose
             show mc greed at right
             show greed normal at left
             with ease
-            "If only they had seen it coming, maybe you wouldn't be in this mess! RIP"
+            "As you touch the sword it melts in your hand to form a pool of blood. Rage envelops you and in the blink of an eye you decapitate the grim reaper with his own scythe."
+            "He immediately reassembles and chuckles."
+            greed "Third time this week!"
 
     hide mc
     hide greed
@@ -244,12 +246,12 @@ label start:
             show wrath normal at left
             with ease
             "You systematically expire the apple, orange, and kiwi. That's the last juice they will be squirting. Fruit salad anyone?"
-        "Quest 4:  Rival vines have stolen Grapes' car. Go get it back.": #lose
+        "Quest 4:  The vending machine is out of order so Grapes needs you to pick him up a Kit Kat.  Hopefully he won't notice you only eat yours widthwise.": #lose
             show mc wrath at right
             show wrath normal at left
             with ease
-            "A childhood wasted playing a tactical espionage action video game whose name you can't quite remember comes in handy and you successfully retrieve the grapemobile."
-
+            "You hand Grapes his Kit Kat and bite into yours while in the landscape orientation.  Grapes is visibly disturbed and belts out."
+            wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
     hide mc
     hide wrath
     scene bg black
@@ -267,33 +269,35 @@ label start:
     with dissolve
 
     "The Hellevator speeds down to the next level. You take a deep breath as the doors slowly spread open. You do a double-take as what stands before you is a life-size chocolate wrapped in an aluminum foil shell. The thin strip of paper sticking out of it's head wiggles as it begins to speak."
-    heresy "Hey there sweet cheeks, you've come to the right place!"
+    heresy "Hey there sweet cheeks, I'm Hereshey Kiss. You've come to the right place!"
     mc "I have?"
     heresy "Of course, you look like a non-believer!"
     mc "I do?"
     heresy "*Giggles* It's written all over your face! I have a challenge for you, let's see if you are at my level!"
     mc "Sure thing, why not?"
-    heresy "Pick one of the following actions that you think would melt me from the inside out."
+    heresy "Pick one of the following actions that you think would melt me in your mouth and not in your hand."
 
     show mc normal at menuRight
     show heresy normal at menuLeft
     with ease
     menu:
-        "Action 1: Eat her Kit Kat widthwise. You know what we mean.": #win
+        "Action 1:  Perform candy-bar genocide.": #win
             show mc normal at right
             show heresy at left
             with ease
-            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise." 
-        "Action 2: Give her a massage.": #lose
+            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!" 
+        "Action 2: Give Hereshey Kiss a kiss.": #lose
             show mc normal at right
             show heresy at left
             with ease
-            "Approaching hereshey from the rear, you gently massage her between the foil but she enjoys it too much and turns into a chocolately puddle."
+            "You lean in and give hersehey a peck on the wrapper. She blushes and returns the favour. Could this be the start of something special?"
         "Action 3: Woo her with some sweet talk": #lose
             show mc normal at right
             show heresy at left
             with ease
-            "You lean in closer to hereshey and whisper in her ear, you know what my favourite drink is? Hot chocolate! Game over!"
+            "You lean in closer to Hereshey to whisper in her ear"
+            mc "You know what my favourite drink is? Hot chocolate!"
+            "Game over!"
         "Action 4: Play her a tune using only your body parts.": #lose
             show mc normal at right
             show heresy at left
