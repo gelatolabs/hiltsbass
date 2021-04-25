@@ -12,7 +12,7 @@ init python:
             self.speed = speed
             self.delay = delay
             self.show = manager.create(sprite)
-            self.show.x = -50
+            self.show.x = -100
             self.show.y = ypos
             self.moving = False
 
@@ -22,6 +22,27 @@ init python:
                 self.x = self.x + self.speed
             else:
                 pass
+
+        @property
+        def x(self):
+            return self.show.x
+        @x.setter
+        def x(self, value):
+            self.show.x = value
+
+        @property
+        def y(self):
+            return self.show.y
+        @y.setter
+        def y(self, value):
+            self.show.y = value
+
+    class Player(object):
+        def __init__(self):
+            self.sprite = Image("/images/elevator/player.png")
+            self.show = manager.create(Image("/images/elevator/player.png"))
+            self.show.x = 1250
+            self.show.y = 350
 
         @property
         def x(self):
@@ -48,22 +69,39 @@ init python:
 
     def sprites_event(ev, x, y, st):
         if ev.type == pygame.KEYDOWN and ev.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4]:
-                hit = False
-                for sprite in sprites[:]:
-                    if sprite.moving and (ev.key == pygame.K_1 and sprite.y == 265 or ev.key == pygame.K_2 and sprite.y == 415 or ev.key == pygame.K_3 and sprite.y == 565 or ev.key == pygame.K_4 and sprite.y == 715) and int(sprite.x) in store.targets:
-                        update_health(2)
-                        hit = True
-                        sprite.show.destroy()
-                        sprites.remove(sprite)
-                        break
-                if not hit:
-                    update_health(-10)
-                renpy.restart_interaction()
+            player.show.destroy()
+            player.show = manager.create(Image("/images/elevator/player_punch.png"))
+            player.x = 950
+            if ev.key == pygame.K_1:
+                player.y = -35
+            elif ev.key == pygame.K_2:
+                player.y = 115
+            elif ev.key == pygame.K_3:
+                player.y = 265
+            elif ev.key == pygame.K_4:
+                player.y = 415
+
+            hit = False
+            for sprite in sprites[:]:
+                if sprite.moving and (ev.key == pygame.K_1 and sprite.y == 265 or ev.key == pygame.K_2 and sprite.y == 415 or ev.key == pygame.K_3 and sprite.y == 565 or ev.key == pygame.K_4 and sprite.y == 715) and int(sprite.x) in store.targets:
+                    update_health(2)
+                    hit = True
+                    sprite.show.destroy()
+                    sprites.remove(sprite)
+                    break
+            if not hit:
+                update_health(-10)
+            renpy.restart_interaction()
+        elif ev.type == pygame.KEYUP:
+            player.show.destroy()
+            player.show = manager.create(Image("/images/elevator/player.png"))
+            player.x = 1250
+            player.y = 350
 
     def update_health(amount):
         store.health = min(store.health + amount, 100)
         if store.health <= 0:
-            pass # game over
+            renpy.jump("gameOver")
 
 screen health:
     bar:
@@ -86,9 +124,9 @@ label elevator:
             Note(Image("/images/elevator/enemy.png"), difficulty, 2, 565),
             Note(Image("/images/elevator/enemy.png"), difficulty, 3, 715)
         ]
+        player = Player()
 
         renpy.show_screen("health")
         renpy.show("_", what=manager, zorder=1)
 
-    while True:
-        $ result = ui.interact()
+    $ ui.interact()

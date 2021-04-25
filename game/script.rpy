@@ -320,6 +320,28 @@ label start:
     show violence normal at left
     with dissolve
 
+    "The sound of drumming grows louder and louder as the hellevator descends. You hear what sounds like a war cry and can only imagine what awaits you on the other side of the door.  As it opens you see a group of ancient warriors donning battle gear gathered around a fire.  The largest one turns and approaches you."
+    violence "Speak now or I will split you in two."
+    mc "Uhhh yes sir, your wish is my command."
+    violence "That's more like it, what is your K/D ratio?"
+    mc "I'd rather not say."
+    violence "Actions speak louder than words anyway, let's see what you're really made of!"
+    "The War Lord lays down a map infront of you with four cities."
+    violence "Ok grunt, which one should we attack?"
+
+    menu:
+        "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!": #lose
+            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."  
+            violence "We'll need more weapons for that job!"     
+        "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.": #lose  
+            "Upon selecting Liberty City you realize you have made a mistake.  The War Lord grows impatient and snarls."
+            violence "Haven't you ever invaded anywhere before? Those cowards are not worth our time."
+        "San Andreas: A beautiful coastal settlement that is flourishing.": #lose  
+            "After choosing San Andreas the War Lord realizes you have no clue what you are doing and swings his sword, splitting you in two. Now he has 99 problems but you ain't one."
+        "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.": #win
+            "You point to Vice City and the War Lord cracks an evil smile."
+            violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
+
     hide mc
     hide violence
     scene bg black
@@ -372,4 +394,9 @@ label start:
 
     # Ending B: Kill God
 
+    return
+
+label gameOver:
+    scene bg black
+    "Looks like you're not quite cut out for Hell. Up to Heaven with you! GAME OVER"
     return
