@@ -26,7 +26,7 @@ label start:
     mc "Whaaaaaaaaaaaaaaaaaaa-"
     clippi "WILL YOU STOP THAT?"
     clippi "*sigh*"
-    clippi "You're in purgatory, for now at least."
+    clippi "You're in Limbo, for now at least."
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
@@ -129,7 +129,7 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
+            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
         "Huawei'n pizza: Experience a taste of the orient, all ingredients and information from authentic sources (8 slices). 1,000 calories per slice.": #lose
             show mc gluttony at right
             show gluttony normal at left
@@ -173,7 +173,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment." 
+            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment."
         "Queen: The Queen brings back memories of your various adulterous escapades in VR.": #lose
             show mc greed at right
             show greed normal at left
@@ -201,7 +201,7 @@ label start:
     show mc wrath at right
     show wrath normal at left
     with dissolve
-    
+
     "After a rapid descent the elevator starts to shake and then comes to an abrupt stop. The doors struggle to open and you step into a maze of thick vines, with the feeling that you are being watched."
     wrath "WHO DOST DISTURBETH ME??!"
     "Two purple ovals spring open and you realize that the grape vine is speaking to you."
@@ -218,7 +218,7 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?" 
+            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
         "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.": #lose
             show mc wrath at right
             show wrath normal at left
@@ -258,13 +258,13 @@ label start:
 
     menu:
         "Action 1: Eat her Kit Kat widthwise. You know what we mean.": #win
-            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise." 
+            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise."
         "Action 2: Give her a massage.": #lose
             "Approaching hereshey from the rear, you gently massage her between the foil but she enjoys it too much and turns into a chocolately puddle."
         "Action 3: Woo her with some sweet talk": #lose
             "You lean in closer to hereshey and whisper in her ear, you know what my favourite drink is? Hot chocolate! Game over!"
         "Action 4: Play her a tune using only your body parts.": #lose
-            "Needless to say, it didn't go well..."     
+            "Needless to say, it didn't go well..."
 
     hide mc
     hide heresy
