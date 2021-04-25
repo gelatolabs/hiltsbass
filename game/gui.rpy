@@ -55,19 +55,19 @@ define gui.interface_text_color = u'#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/blkchcry.ttf"
+define gui.text_font = "gui/NewTegomin-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "gui/darkgarden.ttf"
+define gui.name_text_font = "gui/BrazierFlame.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "gui/blkchcry.ttf"
+define gui.interface_text_font = "gui/Isabella.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
 
 ## The size of character names.
-define gui.name_text_size = 41
+define gui.name_text_size = 46
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33

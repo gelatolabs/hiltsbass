@@ -1,8 +1,8 @@
 label start:
     scene bg black
-    play music fire
+    play sound fire loop
     "Welcome to Hell!\nLevel B1: Limbo"
-    "You got run over by a truck hauling $300,000 of stolen/smuggled MVidiot RTA6900 graphics cards. You find yourself in purgatory facing the Clerk of Learning and Information for Perpetual Pergatorial Imprisonment."
+    "You got hit by a truck. You find yourself in Limbo, facing the Clerk of Learning and Information for Perpetual Purgatorial Imprisonment (CLIPPI)."
     clippi "NEXT!"
 
     scene bg limbo with dissolve
@@ -10,7 +10,6 @@ label start:
     show clippi normal at left
     "Wha..."
     "*Where the hell am I?*"
-    "*Why does it look like I'm in the backrooms?*"
     clippi "It looks like you're going to Hell! Would you like help?"
     "Huh?"
     show clippi bored at left
@@ -46,7 +45,7 @@ label start:
     clippi "WTF!!"
     clippi "Obscene! Indecent! Lewd!"
     clippi "Straight to Hell! Do not pass go! Do not collect $200!"
-    clippi "In fact, there is a special place in Hell for weird perverts like you: level B2! Into the Hellevator with you!"
+    clippi "In fact, there is a special place in Hell for weird perverts like you: Level B2! Into the Hellevator with you!"
 
     "An underling escorts you into the Hellevator..."
     underling "Psst... want to get out of here?"

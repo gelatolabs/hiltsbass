@@ -1,5 +1,5 @@
 define mc        = Character("[pname]", color="#FFFFFF")
-define clippi    = Character("Clerk of Learning and Information for Perpetual Pergatorial Imprisonment")
+define clippi    = Character("Clerk of Learning and Information for Perpetual Purgatorial Imprisonment")
 define underling = Character("Underling")
 define lust      = Character("Lust")
 define gluttony  = Character("Gluttony")
@@ -47,8 +47,7 @@ image bg fraud     = "/images/bg/fraud.png"
 image bg treachery = "/images/bg/treachery.png"
 image bg heaven    = "/images/bg/heaven.png"
 
-define audio.fire = "/sound/music/fire.ogg"
-
+define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
 define audio.elevatorDing = "/sound/sfx/elevatorDing.ogg"
 define audio.cannibal     = "/sound/sfx/cannibal.ogg"
