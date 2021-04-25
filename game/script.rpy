@@ -11,7 +11,7 @@ label start:
     "Wha..."
     "*Where the hell am I?*"
     "*Why does it look like I'm in the backrooms?*"
-    clippi "It looks like you're going to hell! Would you like help?"
+    clippi "It looks like you're going to Hell! Would you like help?"
     "Huh?"
     show clippi bored at left
     clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to watch Desperate Housewives."
@@ -29,7 +29,7 @@ label start:
     clippi "You're in purgatory, for now at least."
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
-    clippi "Well, we're just gonna wait around until you do something that's either heaven-worthy or hell-worthy."
+    clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
     mc "Okay..."
 
     label toShitOrNotToShit: # that is the question
@@ -45,10 +45,16 @@ label start:
     show clippi angry at left
     clippi "WTF!!"
     clippi "Obscene! Indecent! Lewd!"
-    clippi "Straight to hell! Do not pass go! Do not collect $200!"
-    clippi "In fact, there is a special place in hell for weird perverts like you: level B2! Into the hellevator with you!"
+    clippi "Straight to Hell! Do not pass go! Do not collect $200!"
+    clippi "In fact, there is a special place in Hell for weird perverts like you: level B2! Into the Hellevator with you!"
 
-    "An underling escorts you into the hellevator and down to level B2..."
+    "An underling escorts you into the Hellevator..."
+    underling "Psst... want to get out of here?"
+    underling "You look pretty strong... I bet you could take Satan."
+    underling "Just keep sinning and make your way deeper and deeper down into the depths of Hell."
+    underling "Satan usually hangs out down in B9. Go fuck him up and you should be able to escape."
+    underling "Take this map. It'll help guide you."
+    $ have_map = True
 
     hide mc
     hide clippi
@@ -57,7 +63,7 @@ label start:
     play sound elevatorOpen
     "Level B2: Lust"
     play sound elevatorDing
-    "The hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear his conversation."
+    "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear his conversation."
     scene bg lust
     show mc lust at right
     show lust normal at left
@@ -74,26 +80,26 @@ label start:
     show lust normal at menuLeft
     with ease
     menu:
-        "Steal the magazines and run back into the hellevator.": #lose
+        "Steal the magazines and run back into the Hellevator.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "The hellevator doors slam shut and you hear a voice: \"Hell is no place for common thieves!\""
+            "The Hellevator doors slam shut and you hear a voice: \"Hell is no place for common thieves!\""
         "Bring the magazines to the restroom and take care of bidnazz.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "After relieving some tension you return the somewhat moister magazines to the desk and head back to the hellevator."
+            "After relieving some tension you return the somewhat moister magazines to the desk and head back to the Hellevator."
         "Donate the magazines to a box labelled charity.": #lose
             show mc lust at right
             show lust normal at left
             with ease
-            "The charity box glows with a pale yellow light. It engulfs you and pulls you back into the hellevator."
+            "The charity box glows with a pale yellow light. It engulfs you and pulls you back into the Hellevator."
         "Lick the magazines to further investigate the source of the stickiness.": #win
             show mc lust at right
             show lust normal at left
             with ease
-            "It appears as though the stickiness is of human origin. You lick your lips and decide there is nothing more to be said or done here and proceed back to the hellevator."
+            "It appears as though the stickiness is of human origin. You lick your lips and decide there is nothing more to be said or done here and proceed back to the Hellevator."
 
     hide mc
     hide lust
@@ -128,12 +134,12 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "After downing the whole pizza you feel like you have somehow been violated and head back to the hellevator."
+            "After downing the whole pizza you feel like you have somehow been violated and head back to the Hellevator."
         "Juicy vegan bites: Meat of the highest quality, consisting solely of murderers who are vegan. 500 calories pers serving, gluten free.": #win
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "It doesn't taste quite right but somehow you feel healthier and your digestive tract springs into action. With renewed energy you sprint to the hellevator."
+            "It doesn't taste quite right but somehow you feel healthier and your digestive tract springs into action. With renewed energy you sprint to the Hellevator."
         "Spring rolls: No ingredients are listed but strangely enough there is a music note.": #lose
             #play sound rickroll
             show mc gluttony at right
@@ -147,7 +153,7 @@ label start:
     play sound elevatorOpen
     "Level B4: Greed"
     #play sound kaching
-    "The hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
+    "The Hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
     "You feel a chill down your spine as you glance at what sits before you behind a card table."
     scene bg greed
     show mc greed at right
@@ -167,7 +173,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the hellevator, feeling a sense of accomplishment." 
+            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment." 
         "Queen: The Queen brings back memories of your various adulterous escapades in VR.": #lose
             show mc greed at right
             show greed normal at left
@@ -177,7 +183,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "The extra small size was your biggest seller. Who knew such small things could lead to big profits? The hellevator doors await your return for ascension"
+            "The extra small size was your biggest seller. Who knew such small things could lead to big profits? The Hellevator doors await your return for ascension"
         "Ace: The Ace instantly refreshes your memories of purchasing nails at the hardware store for nefarious purposes.": #lose
             show mc greed at right
             show greed normal at left
@@ -227,7 +233,7 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "A childhood wasted playing a tactical espionage action video game whose name you can't quite remember comes in handy and you successfully retrieve the wheelz."
+            "A childhood wasted playing a tactical espionage action video game whose name you can't quite remember comes in handy and you successfully retrieve the grapemobile."
 
     hide mc
     hide wrath
@@ -240,6 +246,25 @@ label start:
     show mc heresy at right
     show heresy normal at left
     with dissolve
+
+    "The Hellevator speeds down to the next level. You take a deep breath as the doors slowly spread open. You do a double-take as what stands before you is a life-size chocolate wrapped in an aluminum foil shell. The thin strip of paper sticking out of it's head wiggles as it begins to speak."
+    heresy "Hey there sweet cheeks, you've come to the right place!"
+    mc "I have?"
+    heresy "Of course, you look like a non-believer!"
+    mc "I do?"
+    heresy "*Giggles* It's written all over your face! I have a challenge for you, let's see if you are at my level!"
+    mc "Sure thing, why not?"
+    heresy "Pick one of the following actions that you think would melt me from the inside out."
+
+    menu:
+        "Action 1: Eat her Kit Kat widthwise. You know what we mean.": #win
+            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise." 
+        "Action 2: Give her a massage.": #lose
+            "Approaching hereshey from the rear, you gently massage her between the foil but she enjoys it too much and turns into a chocolately puddle."
+        "Action 3: Woo her with some sweet talk": #lose
+            "You lean in closer to hereshey and whisper in her ear, you know what my favourite drink is? Hot chocolate! Game over!"
+        "Action 4: Play her a tune using only your body parts.": #lose
+            "Needless to say, it didn't go well..."     
 
     hide mc
     hide heresy

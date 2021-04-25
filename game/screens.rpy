@@ -247,6 +247,10 @@ screen quick_menu():
 
     if quick_menu:
 
+        if have_map:
+            vbox xpos 10 ypos 10:
+                imagebutton idle "gui/map_idle.png" hover "gui/map_hover.png" action Show('map')
+
         hbox:
             style_prefix "quick"
 
@@ -269,6 +273,7 @@ init python:
     config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
+default have_map = False
 
 style quick_button is default
 style quick_button_text is button_text
@@ -278,6 +283,18 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
+
+
+## Map screen ###########################################################
+##
+## A map of hell.
+
+screen map():
+
+    zorder 101
+
+    vbox xalign 0 yalign 0:
+        imagebutton idle "gui/map.png" action Hide('map')
 
 
 ################################################################################
