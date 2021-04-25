@@ -63,7 +63,7 @@ label start:
     play sound elevatorOpen
     "Level B2: Lust"
     play sound elevatorDing
-    "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear his conversation."
+    "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear her conversation."
     scene bg lust
     show mc lust at right
     show lust normal at left
@@ -129,7 +129,7 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
+            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
         "Huawei'n pizza: Experience a taste of the orient, all ingredients and information from authentic sources (8 slices). 1,000 calories per slice.": #lose
             show mc gluttony at right
             show gluttony normal at left
@@ -173,7 +173,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment."
+            "After selecting the Jack card an unholy cackling pierces your ears and you flaunt an evil smile on your way back to the Hellevator, feeling a sense of accomplishment." 
         "Queen: The Queen brings back memories of your various adulterous escapades in VR.": #lose
             show mc greed at right
             show greed normal at left
@@ -201,7 +201,7 @@ label start:
     show mc wrath at right
     show wrath normal at left
     with dissolve
-
+    
     "After a rapid descent the elevator starts to shake and then comes to an abrupt stop. The doors struggle to open and you step into a maze of thick vines, with the feeling that you are being watched."
     wrath "WHO DOST DISTURBETH ME??!"
     "Two purple ovals spring open and you realize that the grape vine is speaking to you."
@@ -218,7 +218,7 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
+            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?" 
         "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.": #lose
             show mc wrath at right
             show wrath normal at left
@@ -243,7 +243,7 @@ label start:
     "Level B6: Heresy"
     play sound elevatorDing
     scene bg heresy
-    show mc heresy at right
+    show mc normal at right
     show heresy normal at left
     with dissolve
 
@@ -256,15 +256,30 @@ label start:
     mc "Sure thing, why not?"
     heresy "Pick one of the following actions that you think would melt me from the inside out."
 
+    show mc normal at menuRight
+    show heresy normal at menuLeft
+    with ease
     menu:
         "Action 1: Eat her Kit Kat widthwise. You know what we mean.": #win
-            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise."
+            show mc normal at right
+            show heresy at left
+            with ease
+            "You quickly whip a fresh Kit Kat bar out of your pants, turn it 90 degrees and take a bite of it widthwise." 
         "Action 2: Give her a massage.": #lose
+            show mc normal at right
+            show heresy at left
+            with ease
             "Approaching hereshey from the rear, you gently massage her between the foil but she enjoys it too much and turns into a chocolately puddle."
         "Action 3: Woo her with some sweet talk": #lose
+            show mc normal at right
+            show heresy at left
+            with ease
             "You lean in closer to hereshey and whisper in her ear, you know what my favourite drink is? Hot chocolate! Game over!"
         "Action 4: Play her a tune using only your body parts.": #lose
-            "Needless to say, it didn't go well..."
+            show mc normal at right
+            show heresy at left
+            with ease
+            "Needless to say, it didn't go well..."     
 
     hide mc
     hide heresy
@@ -298,8 +313,8 @@ label start:
     "Level B9: Treachery"
     play sound elevatorDing
     scene bg treachery
-    show mc treachery at right
-    show satan normal at left
+    show mc normal at right
+    show satan normal at bigLeft
     with dissolve
 
     # Ending A: Kill Satan
@@ -312,8 +327,8 @@ label start:
     "Heaven"
     play sound elevatorDing
     scene bg heaven
-    show mc treachery at right
-    show god normal at left
+    show mc normal at right
+    show god normal at bigLeft
     with dissolve
 
     # Ending B: Kill God

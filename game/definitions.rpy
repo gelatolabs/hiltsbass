@@ -16,10 +16,8 @@ image mc lust         = "/images/mc/lust.png"
 image mc gluttony     = "/images/mc/gluttony.png"
 image mc greed        = "/images/mc/greed.png"
 image mc wrath        = "/images/mc/wrath.png"
-image mc heresy       = "/images/mc/heresy.png"
 image mc violence     = "/images/mc/violence.png"
 image mc fraud        = "/images/mc/fraud.png"
-image mc treachery    = "/images/mc/treachery.png"
 image clippi normal   = "/images/clippi/normal.png"
 image clippi bored    = "/images/clippi/bored.png"
 image clippi angry    = "/images/clippi/angry.png"
@@ -66,3 +64,6 @@ transform menuLeft:
 
 transform menuRight:
     pos (0.6, 0.48)
+
+transform bigLeft:
+    pos (0, 0)
