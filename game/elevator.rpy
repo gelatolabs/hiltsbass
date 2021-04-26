@@ -65,6 +65,12 @@ init python:
                 update_health(-10)
                 sprite.show.destroy()
                 sprites.remove(sprite)
+                renpy.restart_interaction()
+
+        if time.time() - store.t >= 10:
+            store.song_over = True
+            renpy.timeout(0)
+
         return 0.05
 
     def sprites_event(ev, x, y, st):
@@ -97,10 +103,18 @@ init python:
             player.show = manager.create(Image("/images/elevator/player.png"))
             player.x = 1250
             player.y = 350
+            renpy.restart_interaction()
+
+        if store.song_over:
+            renpy.hide_screen("health")
+            return True
+        else:
+            raise renpy.IgnoreEvent()
 
     def update_health(amount):
         store.health = min(store.health + amount, 100)
         if store.health <= 0:
+            renpy.hide_screen("health")
             renpy.jump("gameOver")
 
 screen health:
@@ -116,6 +130,7 @@ label elevator:
         difficulty = 10 + difficulty * 3
         health = 100
         t = time.time()
+        song_over = False
         manager = SpriteManager(update=sprites_update, event=sprites_event)
         targets = set(1300+i for i in xrange(-85, 85))
         sprites = [

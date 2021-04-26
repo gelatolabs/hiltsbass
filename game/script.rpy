@@ -55,17 +55,21 @@ label start:
     underling "Take this map. It'll help guide you."
     $ have_map = True
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide clippi
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B2: Lust"
+    "The Hellevator is under attack!"
 
     $ difficulty = 1
     call elevator
 
-    "Level B2: Lust"
     play sound elevatorDing
+    "You always knew your Guitar Hero skills would save your life one day."
     "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear her conversation."
     scene bg lust
     show mc lust at right
@@ -83,37 +87,40 @@ label start:
     show lust normal at menuLeft
     with ease
     menu:
-        "Choose Fun with Buns to satisfy your appetite & beyond.": #win
+        "Choose \"Fun with Buns\" to satisfy your appetite & beyond.": #win
             show mc lust at right
             show lust normal at left
             with ease
-            "You grab the Fun with Buns magazine and head to the restroom to relieve yourself of some pressure.  Along the way you grab 3 bags of cheeseter's hawt fries."
-        "Choose Deep n cheep to get more bang for your buck.": #lose
+            "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure.  Along the way you grab 3 bags of cheeseter's hawt fries."
+        "Choose \"Deep 'n' cheep\" to get more bang for your buck.": #lose
             show mc lust at right
             show lust normal at left
             with ease
             "This magazine is half price but it should still get the job done.  That's what she said!"
-        "Choose Smokey or chokey because gag reflexes are foreign to you.": #lose
+        "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.": #lose
             show mc lust at right
             show lust normal at left
             with ease
             "Oh yeah, the cover on this one is hot as hell and will really pump you up!"
-        "Choose Blowin for owin.": #lose
+        "Choose \"Blowin' for Owin\".": #lose
             show mc lust at right
             show lust normal at left
             with ease
             "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide lust
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B3: Gluttony"
+    "The Hellevator is under attack!"
 
     $ difficulty = 2
     call elevator
 
-    "Level B3: Gluttony"
     play sound elevatorDing
     "A faint ding indicates you have arrived at the next level. As the door opens you are overwhelmed by an extremely unpleasant odor and thick fog."
     scene bg gluttony
@@ -153,16 +160,19 @@ label start:
             show gluttony normal at left
             with ease
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide gluttony
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B4: Greed"
+    "The Hellevator is under attack!"
 
     $ difficulty = 3
     call elevator
 
-    "Level B4: Greed"
     #play sound kaching
     "The Hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
     "You feel a chill down your spine as you glance at what sits before you behind a card table."
@@ -203,16 +213,19 @@ label start:
             "He immediately reassembles and chuckles."
             greed "Third time this week!"
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide greed
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B5: Wrath"
+    "The Hellevator is under attack!"
 
     $ difficulty = 4
     call elevator
 
-    "Level B5: Wrath"
     play sound elevatorDing
     scene bg wrath
     show mc wrath at right
@@ -252,16 +265,20 @@ label start:
             with ease
             "You hand Grapes his Kit Kat and bite into yours while in the landscape orientation.  Grapes is visibly disturbed and belts out."
             wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
+
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide wrath
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B6: Heresy"
+    "The Hellevator is under attack!"
 
     $ difficulty = 5
     call elevator
 
-    "Level B6: Heresy"
     play sound elevatorDing
     scene bg heresy
     show mc normal at right
@@ -304,16 +321,19 @@ label start:
             with ease
             "Needless to say, it didn't go well..."     
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide heresy
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B7: Violence"
+    "The Hellevator is under attack!"
 
     $ difficulty = 6
     call elevator
 
-    "Level B7: Violence"
     play sound elevatorDing
     scene bg violence
     show mc violence at right
@@ -336,38 +356,44 @@ label start:
         "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.": #lose  
             "Upon selecting Liberty City you realize you have made a mistake.  The War Lord grows impatient and snarls."
             violence "Haven't you ever invaded anywhere before? Those cowards are not worth our time."
-        "San Andreas: A beautiful coastal settlement that is flourishing.": #lose  
+        "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.": #lose  
             "After choosing San Andreas the War Lord realizes you have no clue what you are doing and swings his sword, splitting you in two. Now he has 99 problems but you ain't one."
         "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.": #win
             "You point to Vice City and the War Lord cracks an evil smile."
             violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide violence
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B8: Fraud"
+    "The Hellevator is under attack!"
 
     $ difficulty = 7
     call elevator
 
-    "Level B8: Fraud"
     play sound elevatorDing
     scene bg fraud
     show mc fraud at right
     show fraud normal at left
     with dissolve
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide fraud
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Level B9: Treachery"
+    "The Hellevator is under attack!"
 
     $ difficulty = 8
     call elevator
 
-    "Level B9: Treachery"
     play sound elevatorDing
     scene bg treachery
     show mc normal at right
@@ -376,16 +402,19 @@ label start:
 
     # Ending A: Kill Satan
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
     hide mc
     hide satan
     scene bg black
     with dissolve
     play sound elevatorOpen
+    "Heaven"
+    "The Hellevator is under attack!"
 
     $ difficulty = 9
     call elevator
-    
-    "Heaven"
+
     play sound elevatorDing
     scene bg heaven
     show mc normal at right
@@ -399,4 +428,4 @@ label start:
 label gameOver:
     scene bg black
     "Looks like you're not quite cut out for Hell. Up to Heaven with you! GAME OVER"
-    return
+    $ renpy.load("autosave")
