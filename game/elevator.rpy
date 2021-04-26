@@ -41,8 +41,8 @@ init python:
         def __init__(self):
             self.sprite = Image("/images/elevator/player.png")
             self.show = manager.create(Image("/images/elevator/player.png"))
-            self.show.x = 1250
-            self.show.y = 350
+            self.show.x = 1575
+            self.show.y = 675
 
         @property
         def x(self):
@@ -77,15 +77,15 @@ init python:
         if ev.type == pygame.KEYDOWN and ev.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4]:
             player.show.destroy()
             player.show = manager.create(Image("/images/elevator/player_punch.png"))
-            player.x = 950
+            player.x = 1275
             if ev.key == pygame.K_1:
-                player.y = -35
+                player.y = 290
             elif ev.key == pygame.K_2:
-                player.y = 115
+                player.y = 440
             elif ev.key == pygame.K_3:
-                player.y = 265
+                player.y = 590
             elif ev.key == pygame.K_4:
-                player.y = 415
+                player.y = 740
 
             hit = False
             for sprite in sprites[:]:
@@ -104,8 +104,8 @@ init python:
 
             player.show.destroy()
             player.show = manager.create(Image("/images/elevator/player.png"))
-            player.x = 1250
-            player.y = 350
+            player.x = 1575
+            player.y = 675
             renpy.restart_interaction()
 
         if store.song_over:

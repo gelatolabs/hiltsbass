@@ -48,6 +48,10 @@ image bg treachery = "/images/bg/treachery.png"
 image bg heaven    = "/images/bg/heaven.png"
 image bg elevator  = "/images/elevator/bg.png"
 
+define audio.menu =  "/sound/music/menu.mp3"
+define audio.limbo = "/sound/music/limbo.mp3"
+define audio.lust =  "/sound/music/lust.mp3"
+
 define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
 define audio.elevatorDing = "/sound/sfx/elevatorDing.ogg"
@@ -69,4 +73,4 @@ transform menuRight:
     pos (0.6, 0.48)
 
 transform bigLeft:
-    pos (0, 0)
+    pos (0, 0.03)

@@ -4,6 +4,7 @@ label start:
     #play sound carCrash
     "Level B1: Limbo"
 
+    play music limbo
     scene bg limbo
     show mc normal at right
     show clippi normal at left
@@ -29,14 +30,12 @@ label start:
     mc "Sooo I'm in the bad place then?"
     clippi "You're in Limbo, for now at least."
     mc "Are you sure? because this seems pretty bad"
-    clippi "Yeah it's fine"
+    clippi "Yeah everything is fine"
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
     mc "Okay..."
 
-    $ renpy.take_screenshot()
-    $ renpy.save("autosave")
     hide mc
     hide clippi
     scene bg black
@@ -62,6 +61,7 @@ label start:
     show mc lust at right
     show clippi normal at left
 
+    mc "well here goes nothing"
 
     label toShitOrNotToShit: # that is the question
         menu:
@@ -72,25 +72,26 @@ label start:
                 clippi "Come on now, I haven't got all day!"
                 jump toShitOrNotToShit
 
-    "Well, don't mind if I do..."
     show clippi angry at left
     clippi "WTF!!"
     clippi "Obscene! Indecent! Lewd!"
     clippi "Straight to Hell! Do not pass go! Do not collect $200!"
     clippi "In fact, there is a special place in Hell for weird perverts like you: Level B2! Into the Hellevator with you!"
 
-
     "An underling escorts you into the Hellevator..."
-    underling "Psst... want to get out of here?"
-    underling "You look pretty strong... I bet you could take Satan."
-    underling "Just keep sinning and make your way deeper and deeper down into the depths of Hell."
-    underling "Satan usually hangs out down in B9. Go fuck him up and you should be able to escape."
-    underling "Take this map. It'll help guide you."
+    underling "Take this map."
+    underling "if you want to kill Satan you should be able to find him with this"
     $ have_map = True
 
     mc "bruh I just wanted to get fucked by cute demon girls"
     underling "..."
 
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
+    hide mc
+    hide clippi
+    scene bg black
+    with dissolve
     play sound elevatorOpen
     play sound fire loop
     "Level B2: Lust"
@@ -99,6 +100,7 @@ label start:
     $ difficulty = 1
     call elevator
 
+    play music lust
     play sound elevatorDing
     "You always knew your Guitar Hero skills would save your life one day."
     "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear her conversation."
@@ -106,7 +108,6 @@ label start:
     show mc lust at right
     show lust normal at left
     with dissolve
-
 
     lust "What can I do for you honey? Is it getting hot in here or is it just me? I have some really interesting new content that looks like it might just fit you well!"
     "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
@@ -393,19 +394,34 @@ label start:
     "The War Lord lays down a map infront of you with four cities."
     violence "Ok grunt, which one should we attack?"
 
+    show mc violence at menuRight
+    show violence normal at menuLeft
+    with ease
     menu:
         "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!":
+            show mc violence at right
+            show violence normal at left
+            with ease
             "You mark Los Santos on the map and the War Lord shakes his head in disagreement."  
             violence "We'll need more weapons for that job!"     
             jump gameOver
         "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.":
+            show mc violence at right
+            show violence normal at left
+            with ease
             "Upon selecting Liberty City you realize you have made a mistake. The War Lord grows impatient and snarls."
             violence "Haven't you ever invaded anywhere before? Those cowards are not worth our time."
             jump gameOver
         "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.":
+            show mc violence at right
+            show violence normal at left
+            with ease
             "After choosing San Andreas the War Lord realizes you have no clue what you are doing and swings his sword, splitting you in two. Now he has 99 problems but you ain't one."
             jump gameOver
         "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.":
+            show mc violence at right
+            show violence normal at left
+            with ease
             "You point to Vice City and the War Lord cracks an evil smile."
             violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
 
@@ -438,16 +454,31 @@ label start:
     fraud "Alright [pname], let's see how low you can really go! I'm afraid our lead software engineer recently met his demise. Help us get out of this jam!"
     "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."
 
+    show mc fraud at menuRight
+    show fraud normal at menuLeft
+    with ease
     menu:
          "MyScrewSoft WinBlows 95: There's a sticky (literally) note indicating that the key has been lost. You must crack it to perform a reinstall.":
+            show mc fraud at right
+            show fraud normal at left
+            with ease
             "You grab the stack of 13 floppy disks and 72 hours later crack the code. Unfortunately Ludum dare 48 is over by then and you fail miserably."
             jump gameOver
          "WinRawr v.1.54 Beta: release 04-22-95: It all fits on one disk but are you really so treacherous to perform such a treacherous task as robbing the poor honest developers of a license fee?":
+            show mc fraud at right
+            show fraud normal at left
+            with ease
             "Knowing well that a special place in hell is reserved for such perfidy, you easily patch and crack the beloved software and Trippi is happily browsing archives of questionable content."
          "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore. Help him out by restoring this ability.":
+            show mc fraud at right
+            show fraud normal at left
+            with ease
             "The software reminds me of you a more \"civilized\" era when licenses were perpetual instead of monthly fees. Your good deed does not go unnoticed."
             jump gameOver
          "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell. It looks like it has been very well used.":
+            show mc fraud at right
+            show fraud normal at left
+            with ease
             "Upon inserting the diskette in your drive an all-too familiar clunking sound notifies you instantly that this disk is toast. Better luck next time!"
             jump gameOver
 
@@ -480,8 +511,14 @@ label start:
     mc "Hmmm, well in that case perhaps we can make a deal."
     satan "I'm listening."
 
+    show mc normal at menuRight
+    show satan normal at menuLeft
+    with ease
     menu:
         "Lust:  Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
+            show mc normal at right
+            show paramedic normal at left
+            with ease
             "After whispering sweet nothings in his ear, you use every ounce of lust in your body that you learned from Hereshey to please the devil in ways that would make even the most hardened criminal cringe."
             "At the moment of his climax and ultimate weakness, you smash his skull with one of the burning coals."
             "A deafening shriek echoes into what seems like an eternity and you wake up to the sound of a paramedic."
@@ -490,11 +527,17 @@ label start:
             paramedic "It was a hit n run but you're all gucci now!"
             mc "Thanks mate! I just had the strangest near-death experience."
         "Fraud: Share your plans with the devil to challenge God.":
+            show mc normal at right
+            show satan normal at bigLeft
+            with ease
             "You flip through your binder of floppy disks and find the one marked \"Ultimate fraud.\""
             "After popping the disk into your beige-coloured tower you demonstrate your master plan to challenge the man upstairs."
-            mc "See here, all we need to do is use PhotoSlop to forge our Angel cards.  That should get us past the pearly gates and then we can terminate with extreme prejudice."
+            mc "See here, all we need to do is use PhotoSlop to forge our papers.  That should get us past the pearly gates and then we can terminate with extreme prejudice."
             "The devil nods in approval and you both head back to the Hellevator."
         "Treachery: Use your mastery of digital manipulation to foil the devil.": #trickdevil
+            show mc normal at right
+            show satan normal at bigLeft
+            with ease
             "Recalling everything you have learned about software piracy to achieve treachery, you decide to give the devil a taste of his own medicine."
             mc "Hey D-man, wanna try out my game it's called [insert our game's name here].  It won first prize in this 72-hour game competition that I can't quite remember the name of!"
             satan "Oooh, sounds tantalizing - yes indeed!"
@@ -502,15 +545,16 @@ label start:
             mc "[pname] wins, flawless victory!"
             "Waking up in a cold sweat you realize it was all just a dream. You look in the mirror and see a fresh burn mark on your neck in the shape of a paper clip. Or was it??"
         "Wrath: Join forces with the devil to embark on an unholy quest.":
+            show mc normal at right
+            show satan normal at bigLeft
+            with ease
             "Realizing there is no easy way out, you decide to sacrifice your soul to the devil and take the final step deeper into evil."
             mc "We can pool our resources and unleash wrath upon the heavens."
             satan "Tell me more."
             "Satan begins to salivate."
             "Let's bring all of the dream team together and smash our way through Heaven's gates to show 'em who's really boss!"
             satan "Hell to the yeah!"
-            "You and satan hop into the hellevator and assemble the team of unholy avengers that you met on your descent."
-
-    # Ending A: Kill Satan
+            "You and Satan hop into the hellevator to assemble the team of unholy avengers that you met on your descent."
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -531,11 +575,11 @@ label start:
     show god normal at bigLeft
     with dissolve
 
-    # Ending B: Kill God
-
     return
 
 label gameOver:
     scene bg black
-    "Looks like you're not quite cut out for Hell. Up to Heaven with you! GAME OVER"
+    "Looks like you're not quite cut out for Hell. Up to Heaven with you!"
+    "GAME OVER"
+    "Let's try that again."
     $ renpy.load("autosave")
