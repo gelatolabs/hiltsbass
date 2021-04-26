@@ -108,7 +108,11 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        side "c r" pos (364, 70) xysize (1192, 196):
+            viewport id "vp" mousewheel True:
+                draggable True
+                text what id "what"
+            vbar value YScrollValue("vp")
 
 
     ## If there's a side image, display it above the text. Do not display on the

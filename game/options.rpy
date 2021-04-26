@@ -206,3 +206,6 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+# Disable rollback
+define config.rollback_enabled = False

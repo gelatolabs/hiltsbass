@@ -1,6 +1,5 @@
 label start:
     scene bg black
-    play sound fire loop
     $ pname = "You"
     "Welcome to Hell!\nLevel B1: Limbo"
     "You got hit by a truck. You find yourself in Limbo, facing the Clerk of Learning and Information for Perpetual Purgatorial Imprisonment (CLIPPI)."
@@ -63,6 +62,7 @@ label start:
     scene bg black
     with dissolve
     play sound elevatorOpen
+    play sound fire loop
     "Level B2: Lust"
     "The Hellevator is under attack!"
 
@@ -144,7 +144,7 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
+            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
         "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.": #lose
             show mc gluttony at right
             show gluttony normal at left
@@ -195,7 +195,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!" 
+            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!"
         "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.": #lose
             show mc greed at right
             show greed normal at left
@@ -232,7 +232,7 @@ label start:
     show mc wrath at right
     show wrath normal at left
     with dissolve
-    
+
     "After a rapid descent the elevator starts to shake and then comes to an abrupt stop. The doors struggle to open and you step into a maze of thick vines, with the feeling that you are being watched."
     wrath "WHO DOST DISTURBETH ME??!"
     "Two purple ovals spring open and you realize that the grape vine is speaking to you."
@@ -249,7 +249,7 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?" 
+            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
         "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.": #lose
             show mc wrath at right
             show wrath normal at left
@@ -303,7 +303,7 @@ label start:
             show mc normal at right
             show heresy normal at left
             with ease
-            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!" 
+            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!"
         "Action 2: Give Hereshey Kiss a kiss.": #lose
             show mc normal at right
             show heresy normal at left
@@ -320,7 +320,7 @@ label start:
             show mc normal at right
             show heresy normal at left
             with ease
-            "Needless to say, it didn't go well..."     
+            "Needless to say, it didn't go well..."
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -352,12 +352,12 @@ label start:
 
     menu:
         "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!": #lose
-            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."  
-            violence "We'll need more weapons for that job!"     
-        "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.": #lose  
+            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."
+            violence "We'll need more weapons for that job!"
+        "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.": #lose
             "Upon selecting Liberty City you realize you have made a mistake.  The War Lord grows impatient and snarls."
             violence "Haven't you ever invaded anywhere before? Those cowards are not worth our time."
-        "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.": #lose  
+        "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.": #lose
             "After choosing San Andreas the War Lord realizes you have no clue what you are doing and swings his sword, splitting you in two. Now he has 99 problems but you ain't one."
         "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.": #win
             "You point to Vice City and the War Lord cracks an evil smile."
@@ -381,6 +381,26 @@ label start:
     show mc fraud at right
     show fraud normal at left
     with dissolve
+
+    "After a short drop and a sudden stop, the hellevator doors squeak open to reveal a somewhat familiar face. Behind a desk sits a sleightly bent out of shape paper clip wearing a rastacap."
+    fraud "Hey mon, how are you doing? Welcome to dee next level right?"
+    mc "Hell yeah!"
+    fraud "I be Trippi, you may have met my cousin CLIPPI up in Limbo."
+    mc "Yes, it was a pleasure. I left something from my behind for him."
+    fraud "How kind and thoughtful! You have made great progress, hopefully you're up for your final test!"
+    mc "Hit me with your best shot!"
+    fraud "Alright [pname], let's see how low you can really go! I'm afraid our lead software engineer recently met his demise. Help us get out of this jam!"
+    "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."
+
+    menu:
+         "MyScrewSoft WinBlows 95: There's a sticky (literally) note indicating that the key has been lost.  You must crack it to perform a reinstall.": #lose
+            "You grab the stack of 13 floppy disks and 72 hours later crack the code.  Unfortunately Ludum dare 48 is over by then and you fail miserably."
+         "WinRawr v.1.54 Beta: release 04-22-95: It all fits on one disk but are you really so treacherous to perform such a treacherous task as robbing the poor honest developers of a license fee?": #win
+             "Knowing well that a special place in hell is reserved for such perfidy, you easily patch and crack the beloved software and Trippi is happily browsing archives of questionable content."
+         "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore.  Help him out by restoring this ability.": #lose
+            "The software reminds me of you a more \"civilized\" era when licenses were perpetual instead of monthly fees.  Your good deed does not go unnoticed."
+         "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell.  It looks like it has been very well used.": #lose
+            "Upon inserting the diskette in your drive an all-too familiar clunking sound notifies you instantly that this disk is toast.  Better luck next time!"
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
