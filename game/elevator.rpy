@@ -240,6 +240,7 @@ label elevator:
                 Note(4567, 4)
             ]
 
+        renpy.music.play("/sound/elevator/" + str(level) + ".mp3", loop=False)
         renpy.show_screen("health")
         renpy.show("_", what=manager, zorder=1)
         ui.interact()
