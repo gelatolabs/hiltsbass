@@ -12,7 +12,7 @@ label start:
     clippi "NEXT!"
     mc "Wha..."
     mc "*Where the hell am I?*"
-    clippi "Read the sign dumbass! Would you like some help with that?"
+    clippi "Read the sign dumbass, or would you like some help with that?"
     mc "Huh?"
     show clippi bored at left
     clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to binge the new season of Desperate Housewives."
@@ -26,8 +26,10 @@ label start:
     mc "Whaaaaaaaaaaaaaaaaaaa-"
     clippi "*sigh* Isn't it obvious?"
     clippi "YOU ARE DEAD."
-    mc "sooo where am I?"
+    mc "Sooo I'm in the bad place then?"
     clippi "You're in Limbo, for now at least."
+    mc "Are you sure? because this seems pretty bad"
+    clippi "Yeah it's fine"
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
@@ -174,7 +176,7 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
+            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
             jump gameOver
         "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.":
             show mc gluttony at right
@@ -228,7 +230,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!"
+            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!" 
             jump gameOver
         "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.":
             show mc greed at right
@@ -268,7 +270,7 @@ label start:
     show mc wrath at right
     show wrath normal at left
     with dissolve
-
+    
     "After a rapid descent the elevator starts to shake and then comes to an abrupt stop. The doors struggle to open and you step into a maze of thick vines, with the feeling that you are being watched."
     wrath "WHO DOST DISTURBETH ME??!"
     "Two purple ovals spring open and you realize that the grape vine is speaking to you."
@@ -285,7 +287,8 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
+            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?" 
+            jump gameOver
         "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.":
             show mc wrath at right
             show wrath normal at left
@@ -304,7 +307,6 @@ label start:
             with ease
             "You hand Grapes his Kit Kat and bite into yours while in the landscape orientation.  Grapes is visibly disturbed and belts out."
             wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
-            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -342,7 +344,7 @@ label start:
             show mc normal at right
             show heresy normal at left
             with ease
-            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!"
+            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!" 
         "Action 2: Give Hereshey Kiss a kiss.":
             show mc normal at right
             show heresy normal at left
@@ -393,8 +395,8 @@ label start:
 
     menu:
         "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!":
-            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."
-            violence "We'll need more weapons for that job!"
+            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."  
+            violence "We'll need more weapons for that job!"     
             jump gameOver
         "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.":
             "Upon selecting Liberty City you realize you have made a mistake. The War Lord grows impatient and snarls."
@@ -478,15 +480,35 @@ label start:
     mc "Hmmm, well in that case perhaps we can make a deal."
     satan "I'm listening."
 
-#    menu:
-#         "Lust:  Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
-#            "After whispering sweet nothings in his ear, you use every ounce of lust in your body that you learned from Hereshey to please the devil in ways that would make even the most hardened criminal cringe."
-#            "At the moment of his climax and ultimate weakness, you smash his skull with one of the burning coals."
-#            "A deafening shriek echoes into what seems like an eternity and you wake up to the sound of a paramedic."
-#            paramedic:"Welcome back buddy, that was a close call!"
-#            mc:"Whaa, whaat happened?"
-#            paramedic:"It was a hit n run but you're all gucci now!"
-#            mc:"Thanks mate! I just had the strangest near-death experience."
+    menu:
+        "Lust:  Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
+            "After whispering sweet nothings in his ear, you use every ounce of lust in your body that you learned from Hereshey to please the devil in ways that would make even the most hardened criminal cringe."
+            "At the moment of his climax and ultimate weakness, you smash his skull with one of the burning coals."
+            "A deafening shriek echoes into what seems like an eternity and you wake up to the sound of a paramedic."
+            paramedic "Welcome back buddy, that was a close call!"
+            mc "Whaa, whaat happened?"
+            paramedic "It was a hit n run but you're all gucci now!"
+            mc "Thanks mate! I just had the strangest near-death experience."
+        "Fraud: Share your plans with the devil to challenge God.":
+            "You flip through your binder of floppy disks and find the one marked \"Ultimate fraud.\""
+            "After popping the disk into your beige-coloured tower you demonstrate your master plan to challenge the man upstairs."
+            mc "See here, all we need to do is use PhotoSlop to forge our Angel cards.  That should get us past the pearly gates and then we can terminate with extreme prejudice."
+            "The devil nods in approval and you both head back to the Hellevator."
+        "Treachery: Use your mastery of digital manipulation to foil the devil.": #trickdevil
+            "Recalling everything you have learned about software piracy to achieve treachery, you decide to give the devil a taste of his own medicine."
+            mc "Hey D-man, wanna try out my game it's called [insert our game's name here].  It won first prize in this 72-hour game competition that I can't quite remember the name of!"
+            satan "Oooh, sounds tantalizing - yes indeed!"
+            "You load up the game and while the devil is distracted during the annoying mini-game you kick his chair and he rolls away, falling into a lazarus pit to be trapped for eternity."
+            mc "[pname] wins, flawless victory!"
+            "Waking up in a cold sweat you realize it was all just a dream. You look in the mirror and see a fresh burn mark on your neck in the shape of a paper clip. Or was it??"
+        "Wrath: Join forces with the devil to embark on an unholy quest.":
+            "Realizing there is no easy way out, you decide to sacrifice your soul to the devil and take the final step deeper into evil."
+            mc "We can pool our resources and unleash wrath upon the heavens."
+            satan "Tell me more."
+            "Satan begins to salivate."
+            "Let's bring all of the dream team together and smash our way through Heaven's gates to show 'em who's really boss!"
+            satan "Hell to the yeah!"
+            "You and satan hop into the hellevator and assemble the team of unholy avengers that you met on your descent."
 
     # Ending A: Kill Satan
 

@@ -57,10 +57,10 @@ define audio.evilLaugh    = "/sound/sfx/evilLaugh.ogg"
 define audio.waterArson   = "/sound/sfx/waterArson.ogg"
 
 transform left:
-    pos (0, 0.1)
+    pos (0, 0.12)
 
 transform right:
-    pos (0.6, 0.22)
+    pos (0.6, 0.24)
 
 transform menuLeft:
     pos (0, 0.36)
