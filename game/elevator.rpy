@@ -107,6 +107,7 @@ init python:
 
         if store.song_over:
             renpy.hide_screen("health")
+            quick_menu = True # doesn't work
             return True
         else:
             raise renpy.IgnoreEvent()
@@ -115,6 +116,7 @@ init python:
         store.health = min(store.health + amount, 100)
         if store.health <= 0:
             renpy.hide_screen("health")
+            quick_menu = True # doesn't work
             renpy.jump("gameOver")
 
 screen health:
@@ -126,7 +128,7 @@ screen health:
 label elevator:
     scene bg elevator
     python:
-        have_map = False
+        quick_menu = False
         difficulty = 10 + difficulty * 3
         health = 100
         t = time.time()

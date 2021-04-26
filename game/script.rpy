@@ -1,6 +1,7 @@
 label start:
     scene bg black
     play sound fire loop
+    $ pname = "You"
     "Welcome to Hell!\nLevel B1: Limbo"
     "You got hit by a truck. You find yourself in Limbo, facing the Clerk of Learning and Information for Perpetual Purgatorial Imprisonment (CLIPPI)."
     clippi "NEXT!"
@@ -8,10 +9,10 @@ label start:
     scene bg limbo with dissolve
     show mc normal at right
     show clippi normal at left
-    "Wha..."
-    "*Where the hell am I?*"
+    mc "Wha..."
+    mc "*Where the hell am I?*"
     clippi "It looks like you're going to Hell! Would you like help?"
-    "Huh?"
+    mc "Huh?"
     show clippi bored at left
     clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to watch Desperate Housewives."
 
@@ -300,24 +301,24 @@ label start:
     menu:
         "Action 1:  Perform candy-bar genocide.": #win
             show mc normal at right
-            show heresy at left
+            show heresy normal at left
             with ease
             "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!" 
         "Action 2: Give Hereshey Kiss a kiss.": #lose
             show mc normal at right
-            show heresy at left
+            show heresy normal at left
             with ease
             "You lean in and give hersehey a peck on the wrapper. She blushes and returns the favour. Could this be the start of something special?"
         "Action 3: Woo her with some sweet talk": #lose
             show mc normal at right
-            show heresy at left
+            show heresy normal at left
             with ease
             "You lean in closer to Hereshey to whisper in her ear"
             mc "You know what my favourite drink is? Hot chocolate!"
             "Game over!"
         "Action 4: Play her a tune using only your body parts.": #lose
             show mc normal at right
-            show heresy at left
+            show heresy normal at left
             with ease
             "Needless to say, it didn't go well..."     
 
