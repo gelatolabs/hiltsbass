@@ -48,6 +48,7 @@ image bg treachery = "/images/bg/treachery.png"
 image bg heaven    = "/images/bg/heaven.png"
 image bg elevator  = "/images/elevator/bg.png"
 
+define audio.menu_intro      = "/sound/music/menu_intro.ogg"
 define audio.menu            = "/sound/music/menu.ogg"
 define audio.limbo           = "/sound/music/limbo.ogg"
 define audio.lust            = "/sound/music/lust.ogg"

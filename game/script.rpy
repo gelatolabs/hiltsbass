@@ -1,12 +1,13 @@
 label start:
+    $ pname = "You"
     window hide
     scene bg black
-    $ pname = "You"
+    stop music fadeout 1.0
     #play sound carCrash
     centered "Level B1: Limbo"
+    play music limbo
     window show
 
-    play music limbo
     scene bg limbo
     show mc normal at right
     show clippi normal at left
@@ -99,6 +100,7 @@ label start:
     $ level = 1
     call elevator
 
+    scene bg black
     play music lust
     play sound elevatorDing
     "You always knew your Guitar Hero skills would save your life one day."
@@ -155,6 +157,8 @@ label start:
     $ level = 2
     call elevator
 
+    scene bg black
+    play music gluttony
     play sound elevatorDing
     "A faint ding indicates you have arrived at the next level. As the door opens you are overwhelmed by an extremely unpleasant odor and thick fog."
     scene bg gluttony
@@ -211,6 +215,9 @@ label start:
     $ level = 3
     call elevator
 
+    scene bg black
+    play music greed_intro noloop
+    queue music greed
     #play sound kaching
     "The Hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
     "You feel a chill down your spine as you glance at what sits before you behind a card table."
@@ -268,6 +275,8 @@ label start:
     $ level = 4
     call elevator
 
+    scene bg black
+    play music wrath
     play sound elevatorDing
     scene bg wrath
     show mc wrath at right
@@ -325,6 +334,8 @@ label start:
     $ level = 5
     call elevator
 
+    scene bg black
+    play music heresy
     play sound elevatorDing
     scene bg heresy
     show mc normal at right
@@ -383,6 +394,8 @@ label start:
     $ level = 6
     call elevator
 
+    scene bg black
+    play music violence
     play sound elevatorDing
     scene bg violence
     show mc violence at right
@@ -443,6 +456,8 @@ label start:
     $ level = 7
     call elevator
 
+    scene bg black
+    play music fraud
     play sound elevatorDing
     scene bg fraud
     show mc fraud at right
@@ -501,6 +516,9 @@ label start:
     $ level = 8
     call elevator
 
+    scene bg black
+    play music treachery_intro noloop
+    queue music treachery
     play sound elevatorDing
     scene bg treachery
     show mc normal at right
@@ -576,6 +594,8 @@ label start:
     $ level = 9
     call elevator
 
+    scene bg black
+    play music heaven
     play sound elevatorDing
     scene bg heaven
     show mc normal at right
