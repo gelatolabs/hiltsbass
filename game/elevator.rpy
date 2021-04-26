@@ -3,23 +3,23 @@
 init python:
     config.screen_width=1920
     config.screen_height=1080
-    import time
+    from datetime import datetime
     import pygame
 
     class Note(object):
-        def __init__(self, sprite, speed, delay, ypos=0):
-            self.sprite = sprite
-            self.speed = speed
+        def __init__(self, delay, note):
+            self.sprite = Image("/images/elevator/enemy.png")
             self.delay = delay
-            self.show = manager.create(sprite)
+            self.show = manager.create(Image("/images/elevator/enemy.png"))
             self.show.x = -100
-            self.show.y = ypos
+            self.show.y = 115 + note * 150
             self.moving = False
 
-        def update(self):
-            if store.t + self.delay < time.time():
+        def update(self, time):
+            d = (self.delay - time) * store.speed
+            if d <= 1300:
                 self.moving = True
-                self.x = self.x + self.speed
+                self.x = 1300 - d
             else:
                 pass
 
@@ -59,32 +59,33 @@ init python:
             self.show.y = value
 
     def sprites_update(st):
+        time = int((datetime.utcnow() - store.start).total_seconds() * 1000.0)
         for sprite in sprites[:]:
-            sprite.update()
+            sprite.update(time)
             if sprite.x > config.screen_width:
                 update_health(-10)
                 sprite.show.destroy()
                 sprites.remove(sprite)
                 renpy.restart_interaction()
 
-        if time.time() - store.t >= 10:
+        if time > store.duration:
             store.song_over = True
             renpy.timeout(0)
 
         return 0.05
 
     def sprites_event(ev, x, y, st):
-        if ev.type == pygame.KEYDOWN and ev.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4]:
+        if ev.type == pygame.KEYDOWN and ev.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4, pygame.K_KP1, pygame.K_KP2, pygame.K_KP3, pygame.K_KP4]:
             player.show.destroy()
             player.show = manager.create(Image("/images/elevator/player_punch.png"))
             player.x = 1275
-            if ev.key == pygame.K_1:
+            if ev.key == pygame.K_1 or ev.key == pygame.K_KP1:
                 player.y = 290
-            elif ev.key == pygame.K_2:
+            elif ev.key == pygame.K_2 or ev.key == pygame.K_KP2:
                 player.y = 440
-            elif ev.key == pygame.K_3:
+            elif ev.key == pygame.K_3 or ev.key == pygame.K_KP3:
                 player.y = 590
-            elif ev.key == pygame.K_4:
+            elif ev.key == pygame.K_4 or ev.key == pygame.K_KP4:
                 player.y = 740
 
             hit = False
@@ -132,21 +133,113 @@ label elevator:
     scene bg elevator
     python:
         quick_menu = False
-        difficulty = 10 + difficulty * 3
         health = 100
-        t = time.time()
+        start = datetime.utcnow()
         song_over = False
         manager = SpriteManager(update=sprites_update, event=sprites_event)
-        targets = set(1300+i for i in xrange(-85, 85))
-        sprites = [
-            Note(Image("/images/elevator/enemy.png"), difficulty, 0, 265),
-            Note(Image("/images/elevator/enemy.png"), difficulty, 1, 415),
-            Note(Image("/images/elevator/enemy.png"), difficulty, 2, 565),
-            Note(Image("/images/elevator/enemy.png"), difficulty, 3, 715)
-        ]
         player = Player()
+        targets = set(1300+i for i in xrange(-85, 85))
+
+        if level == 1:
+            duration = 60000 # song ends after 60000ms
+            speed = 1.0 # cosmetic: notes move 1px/ms
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 2:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 3:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 4:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 5:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 6:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 7:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 8:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == 9:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == satan:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
+        elif level == god:
+            duration = 60000
+            speed = 1.0
+            sprites = [
+                Note(1234, 1),
+                Note(2345, 2),
+                Note(3456, 3),
+                Note(4567, 4)
+            ]
 
         renpy.show_screen("health")
         renpy.show("_", what=manager, zorder=1)
-
-    $ ui.interact()
+        ui.interact()

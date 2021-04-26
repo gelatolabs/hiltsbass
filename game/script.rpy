@@ -96,7 +96,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 1
+    $ level = 1
     call elevator
 
     play music lust
@@ -152,7 +152,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 2
+    $ level = 2
     call elevator
 
     play sound elevatorDing
@@ -208,7 +208,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 3
+    $ level = 3
     call elevator
 
     #play sound kaching
@@ -265,7 +265,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 4
+    $ level = 4
     call elevator
 
     play sound elevatorDing
@@ -322,7 +322,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 5
+    $ level = 5
     call elevator
 
     play sound elevatorDing
@@ -380,7 +380,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 6
+    $ level = 6
     call elevator
 
     play sound elevatorDing
@@ -440,7 +440,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 7
+    $ level = 7
     call elevator
 
     play sound elevatorDing
@@ -498,7 +498,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 8
+    $ level = 8
     call elevator
 
     play sound elevatorDing
@@ -573,7 +573,7 @@ label start:
     window auto
     "The Hellevator is under attack!"
 
-    $ difficulty = 9
+    $ level = 9
     call elevator
 
     play sound elevatorDing
