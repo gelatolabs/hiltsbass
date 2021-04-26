@@ -99,6 +99,9 @@ init python:
                 update_health(-10)
             renpy.restart_interaction()
         elif ev.type == pygame.KEYUP:
+            if ev.key == pygame.K_0: # debug skip
+                store.song_over = True
+
             player.show.destroy()
             player.show = manager.create(Image("/images/elevator/player.png"))
             player.x = 1250
