@@ -108,11 +108,11 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        side "c r" pos (364, 70) xysize (1192, 196):
+        side "c r" pos (364, 70) xysize (1192, 130):
             viewport id "vp" mousewheel True:
                 draggable True
                 text what id "what"
-            vbar value YScrollValue("vp")
+            vbar value YScrollValue("vp") unscrollable "hide"
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -187,7 +187,7 @@ screen input(prompt):
             ypos gui.dialogue_ypos
 
             text prompt style "input_prompt"
-            input id "input"
+            input id "input" color "#000000"
 
 style input_prompt is default
 
