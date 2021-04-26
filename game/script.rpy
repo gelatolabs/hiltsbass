@@ -1,16 +1,18 @@
 label start:
     scene bg black
     $ pname = "You"
-    "Welcome to Hell!\nLevel B1: Limbo"
-    "You got hit by a truck. You find yourself in Limbo, facing the Clerk of Learning and Information for Perpetual Purgatorial Imprisonment (CLIPPI)."
-    clippi "NEXT!"
+    #play sound carCrash
+    "Level B1: Limbo"
 
-    scene bg limbo with dissolve
+    scene bg limbo
     show mc normal at right
     show clippi normal at left
+    with dissolve
+    "You find yourself in a strange place, facing a clerk of some kind."
+    clippi "NEXT!"
     mc "Wha..."
     mc "*Where the hell am I?*"
-    clippi "It looks like you're going to Hell! Would you like help?"
+    clippi "Read the sign dumbass! Would you like help with that?"
     mc "Huh?"
     show clippi bored at left
     clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to watch Desperate Housewives."
@@ -93,21 +95,24 @@ label start:
             show lust normal at left
             with ease
             "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure.  Along the way you grab 3 bags of cheeseter's hawt fries."
-        "Choose \"Deep 'n' cheep\" to get more bang for your buck.": #lose
+        "Choose \"Deep 'n' cheep\" to get more bang for your buck.":
             show mc lust at right
             show lust normal at left
             with ease
             "This magazine is half price but it should still get the job done.  That's what she said!"
-        "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.": #lose
+            jump gameOver
+        "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.":
             show mc lust at right
             show lust normal at left
             with ease
             "Oh yeah, the cover on this one is hot as hell and will really pump you up!"
-        "Choose \"Blowin' for Owin\".": #lose
+            jump gameOver
+        "Choose \"Blowin' for Owin\".":
             show mc lust at right
             show lust normal at left
             with ease
             "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
+            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -140,26 +145,29 @@ label start:
     show gluttony normal at menuLeft
     with ease
     menu:
-        "Bloody goat cheesecake: Handcrafted with only the finest sacrifical animal milk. Topped off with the finely ground kidney stones of traitors. 5,000 calories per serving. ": #lose
+        "Bloody goat cheesecake: Handcrafted with only the finest sacrifical animal milk. Topped off with the finely ground kidney stones of traitors. 5,000 calories per serving. ":
             show mc gluttony at right
             show gluttony normal at left
             with ease
             "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
-        "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.": #lose
+            jump gameOver
+        "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.":
             show mc gluttony at right
             show gluttony normal at left
             with ease
             "After downing the whole pizza you feel like you have somehow violated someone's personal data and go back to the hellevator."
+            jump gameOver
         "Scalper scallops:  Special of the day, all you can scalp!!": #win
             show mc gluttony at right
             show gluttony normal at left
             with ease
             "A fond memory of the riches you earned scalping video cards during a pandemic makes you feel warm and juicy inside."
-        "Spring rolls: No ingredients are listed but strangely enough there is a music note.": #lose
+        "Spring rolls: No ingredients are listed but strangely enough there is a music note.":
             #play sound rickroll
             show mc gluttony at right
             show gluttony normal at left
             with ease
+            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -191,22 +199,25 @@ label start:
     show greed normal at menuLeft
     with ease
     menu:
-        "Catapult:  The first card has an image of a catapult launching a poor traitorous soul into the fiery jaws of a massive hellhound.": #lose
+        "Catapult:  The first card has an image of a catapult launching a poor traitorous soul into the fiery jaws of a massive hellhound.":
             show mc greed at right
             show greed normal at left
             with ease
             "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!"
-        "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.": #lose
+            jump gameOver
+        "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.":
             show mc greed at right
             show greed normal at left
             with ease
             "Upon choosing the shield, a sense of goodness warms your heart.  You feel more virtuous and believe you have done something right."
-        "Gold:  The third card has a pot of gold with a leprechaun menacingly staring at it in obsession.": #lose
+            jump gameOver
+        "Gold:  The third card has a pot of gold with a leprechaun menacingly staring at it in obsession.":
             show mc greed at right
             show greed normal at left
             with ease
             "The gold card is hot to the touch and smells of greed. Haven't you been greedy enough for one day?"
-        "Sword:  The last card shows a blood-soaked sword wielded by a massive ogre, seemingly in a state of bloodlust.": #lose
+            jump gameOver
+        "Sword:  The last card shows a blood-soaked sword wielded by a massive ogre, seemingly in a state of bloodlust.":
             show mc greed at right
             show greed normal at left
             with ease
@@ -245,27 +256,30 @@ label start:
     show wrath normal at menuLeft
     with ease
     menu:
-        "Quest 1:  Grapes needs to assert his juice & dominance in the field. Go drown out the other vines by overwatering them.": #win
+        "Quest 1:  Grapes needs to assert his juice & dominance in the field. Go drown out the other vines by overwatering them.":
             show mc wrath at right
             show wrath normal at left
             with ease
             "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
-        "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.": #lose
+        "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.":
             show mc wrath at right
             show wrath normal at left
             with ease
             "Armed with a hacksaw and steel toe boots, you march to the vantage point but upon looking into the innocent creature's little eyes, you decide to spare him." #lose
+            jump gameOver
         "Quest 3:  Grapes' main squeeze has been spotted juicing other fruits in the neighbourhood. Go clean that up.": #lose
             show mc wrath at right
             show wrath normal at left
             with ease
             "You systematically expire the apple, orange, and kiwi. That's the last juice they will be squirting. Fruit salad anyone?"
+            jump gameOver
         "Quest 4:  The vending machine is out of order so Grapes needs you to pick him up a Kit Kat.  Hopefully he won't notice you only eat yours widthwise.": #lose
             show mc wrath at right
             show wrath normal at left
             with ease
             "You hand Grapes his Kit Kat and bite into yours while in the landscape orientation.  Grapes is visibly disturbed and belts out."
             wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
+            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -299,28 +313,30 @@ label start:
     show heresy normal at menuLeft
     with ease
     menu:
-        "Action 1:  Perform candy-bar genocide.": #win
+        "Action 1:  Perform candy-bar genocide.":
             show mc normal at right
             show heresy normal at left
             with ease
             "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!"
-        "Action 2: Give Hereshey Kiss a kiss.": #lose
+        "Action 2: Give Hereshey Kiss a kiss.":
             show mc normal at right
             show heresy normal at left
             with ease
             "You lean in and give hersehey a peck on the wrapper. She blushes and returns the favour. Could this be the start of something special?"
-        "Action 3: Woo her with some sweet talk": #lose
+            jump gameOver
+        "Action 3: Woo her with some sweet talk":
             show mc normal at right
             show heresy normal at left
             with ease
             "You lean in closer to Hereshey to whisper in her ear"
             mc "You know what my favourite drink is? Hot chocolate!"
-            "Game over!"
-        "Action 4: Play her a tune using only your body parts.": #lose
+            jump gameOver
+        "Action 4: Play her a tune using only your body parts.":
             show mc normal at right
             show heresy normal at left
             with ease
             "Needless to say, it didn't go well..."
+            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -351,15 +367,18 @@ label start:
     violence "Ok grunt, which one should we attack?"
 
     menu:
-        "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!": #lose
+        "Los Santos: The city of angels is not what it used to be. It's time to burn it to the ground and put the citizens back in misery!":
             "You mark Los Santos on the map and the War Lord shakes his head in disagreement."
             violence "We'll need more weapons for that job!"
-        "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.": #lose
-            "Upon selecting Liberty City you realize you have made a mistake.  The War Lord grows impatient and snarls."
+            jump gameOver
+        "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.":
+            "Upon selecting Liberty City you realize you have made a mistake. The War Lord grows impatient and snarls."
             violence "Haven't you ever invaded anywhere before? Those cowards are not worth our time."
-        "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.": #lose
+            jump gameOver
+        "San Andreas: A beautiful coastal settlement that is flourishing. Silicon is used here in abundance to enhance enjoyment.":
             "After choosing San Andreas the War Lord realizes you have no clue what you are doing and swings his sword, splitting you in two. Now he has 99 problems but you ain't one."
-        "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.": #win
+            jump gameOver
+        "Vice City: It has turned into a wretched collection of souls consumed by deception. Tax evasion is at an all-time high.":
             "You point to Vice City and the War Lord cracks an evil smile."
             violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
 
@@ -393,14 +412,17 @@ label start:
     "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."
 
     menu:
-         "MyScrewSoft WinBlows 95: There's a sticky (literally) note indicating that the key has been lost.  You must crack it to perform a reinstall.": #lose
-            "You grab the stack of 13 floppy disks and 72 hours later crack the code.  Unfortunately Ludum dare 48 is over by then and you fail miserably."
-         "WinRawr v.1.54 Beta: release 04-22-95: It all fits on one disk but are you really so treacherous to perform such a treacherous task as robbing the poor honest developers of a license fee?": #win
-             "Knowing well that a special place in hell is reserved for such perfidy, you easily patch and crack the beloved software and Trippi is happily browsing archives of questionable content."
-         "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore.  Help him out by restoring this ability.": #lose
-            "The software reminds me of you a more \"civilized\" era when licenses were perpetual instead of monthly fees.  Your good deed does not go unnoticed."
-         "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell.  It looks like it has been very well used.": #lose
-            "Upon inserting the diskette in your drive an all-too familiar clunking sound notifies you instantly that this disk is toast.  Better luck next time!"
+         "MyScrewSoft WinBlows 95: There's a sticky (literally) note indicating that the key has been lost. You must crack it to perform a reinstall.":
+            "You grab the stack of 13 floppy disks and 72 hours later crack the code. Unfortunately Ludum dare 48 is over by then and you fail miserably."
+            jump gameOver
+         "WinRawr v.1.54 Beta: release 04-22-95: It all fits on one disk but are you really so treacherous to perform such a treacherous task as robbing the poor honest developers of a license fee?":
+            "Knowing well that a special place in hell is reserved for such perfidy, you easily patch and crack the beloved software and Trippi is happily browsing archives of questionable content."
+         "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore. Help him out by restoring this ability.":
+            "The software reminds me of you a more \"civilized\" era when licenses were perpetual instead of monthly fees. Your good deed does not go unnoticed."
+            jump gameOver
+         "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell. It looks like it has been very well used.":
+            "Upon inserting the diskette in your drive an all-too familiar clunking sound notifies you instantly that this disk is toast. Better luck next time!"
+            jump gameOver
 
     $ renpy.take_screenshot()
     $ renpy.save("autosave")
@@ -420,6 +442,16 @@ label start:
     show mc normal at right
     show satan normal at bigLeft
     with dissolve
+
+    "The elevator door turns red and flames appear all around the edges.  As the door opens a path of hot coals appears and leads up to a throne in the distance."
+    "You painfully walk the path and somehow the smell of the burning flesh on your feet enhances the experience."
+    "As you approach the throne it slowly turns to face you, as if controlled by an unknown source. You realize that you are looking at the devil himself."
+    satan "Welcome to my domain, you filthy animal. What can I do you for?"
+    mc "I'm hoping to save my soul."
+    "Lucifer's laughter is so loud it shakes the ground."
+    satan "I'm afraid that's impossible, your soul is mine FOREVER!"
+    mc "Hmmm, well in that case perhaps we can make a deal."
+    satan "I'm listening."
 
     # Ending A: Kill Satan
 
