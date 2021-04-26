@@ -1,8 +1,10 @@
 label start:
+    window hide
     scene bg black
     $ pname = "You"
     #play sound carCrash
-    "Level B1: Limbo"
+    centered "Level B1: Limbo"
+    window show
 
     play music limbo
     scene bg limbo
@@ -23,45 +25,38 @@ label start:
 
     clippi "Alright [pname], looks like you got hit by a zepplin."
     mc "Wha..."
-    clippi "yeah that's a weird one for sure but whatever you're here now"
+    clippi "Yeah that's a weird one for sure but whatever you're here now"
     mc "Whaaaaaaaaaaaaaaaaaaa-"
     clippi "*sigh* Isn't it obvious?"
     clippi "YOU ARE DEAD."
     mc "Sooo I'm in the bad place then?"
     clippi "You're in Limbo, for now at least."
-    mc "Are you sure? because this seems pretty bad"
-    clippi "Yeah everything is fine"
+    mc "Are you sure? Because this seems pretty bad."
+    clippi "Yeah everything is fine."
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
     mc "Okay..."
 
-    hide mc
-    hide clippi
     scene bg black
-    with dissolve
-
-    scene bg black
-    with dissolve
     show lust normal at left
     show mc normal at right
+    with dissolve
 
     lust "We're all out of the XXL model, this pandemic has seen a surge in the urge haha!"
     lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
     play sound elevatorDing
-    lust "I'm excited"
-    hide lust normal
+    lust "I'm excited ;)"
+    hide lust normal with dissolve
     show mc lust at right with dissolve
-    mc "I know what I must do"
-    hide mc lust
-    scene bg black
-    with dissolve
+    mc "I know what I must do."
 
     scene bg limbo
     show mc lust at right
     show clippi normal at left
+    with fade
 
-    mc "well here goes nothing"
+    mc "Well, here goes nothing..."
 
     label toShitOrNotToShit: # that is the question
         menu:
@@ -78,15 +73,17 @@ label start:
     clippi "Straight to Hell! Do not pass go! Do not collect $200!"
     clippi "In fact, there is a special place in Hell for weird perverts like you: Level B2! Into the Hellevator with you!"
 
+    scene bg black
+    show mc normal at right
+    with dissolve
     "An underling escorts you into the Hellevator..."
     underling "Take this map."
-    underling "if you want to kill Satan you should be able to find him with this"
+    underling "If you want to kill Satan, you should be able to find him with this."
     $ have_map = True
 
-    mc "bruh I just wanted to get fucked by cute demon girls"
+    mc "Bruh, I just wanted to get fucked by cute demon girls..."
     underling "..."
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide clippi
@@ -94,7 +91,9 @@ label start:
     with dissolve
     play sound elevatorOpen
     play sound fire loop
-    "Level B2: Lust"
+    window hide
+    centered "Level B2: Lust"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 1
@@ -142,14 +141,15 @@ label start:
             "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
             jump gameOver
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide lust
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B3: Gluttony"
+    window hide
+    centered "Level B3: Gluttony"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 2
@@ -197,14 +197,15 @@ label start:
             with ease
             jump gameOver
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide gluttony
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B4: Greed"
+    window hide
+    centered "Level B4: Greed"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 3
@@ -253,14 +254,15 @@ label start:
             "He immediately reassembles and chuckles."
             greed "Third time this week!"
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide greed
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B5: Wrath"
+    window hide
+    centered "Level B5: Wrath"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 4
@@ -309,14 +311,15 @@ label start:
             "You hand Grapes his Kit Kat and bite into yours while in the landscape orientation.  Grapes is visibly disturbed and belts out."
             wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide wrath
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B6: Heresy"
+    window hide
+    centered "Level B6: Heresy"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 5
@@ -366,14 +369,15 @@ label start:
             "Needless to say, it didn't go well..."
             jump gameOver
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide heresy
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B7: Violence"
+    window hide
+    centered "Level B7: Violence"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 6
@@ -425,14 +429,15 @@ label start:
             "You point to Vice City and the War Lord cracks an evil smile."
             violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide violence
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B8: Fraud"
+    window hide
+    centered "Level B8: Fraud"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 7
@@ -482,14 +487,15 @@ label start:
             "Upon inserting the diskette in your drive an all-too familiar clunking sound notifies you instantly that this disk is toast. Better luck next time!"
             jump gameOver
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide fraud
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Level B9: Treachery"
+    window hide
+    centered "Level B9: Treachery"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 8
@@ -556,14 +562,15 @@ label start:
             satan "Hell to the yeah!"
             "You and Satan hop into the hellevator to assemble the team of unholy avengers that you met on your descent."
 
-    $ renpy.take_screenshot()
     $ renpy.save("autosave")
     hide mc
     hide satan
     scene bg black
     with dissolve
     play sound elevatorOpen
-    "Heaven"
+    window hide
+    centered "Heaven"
+    window auto
     "The Hellevator is under attack!"
 
     $ difficulty = 9
