@@ -63,6 +63,8 @@ define audio.treachery_intro = "/sound/music/treachery_intro.ogg"
 define audio.treachery       = "/sound/music/treachery.ogg"
 define audio.heaven          = "/sound/music/heaven.ogg"
 
+#define audio.kaching     = "/sound/sfx/kaching"
+
 define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
 define audio.elevatorDing = "/sound/sfx/elevatorDing.ogg"

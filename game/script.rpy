@@ -62,9 +62,9 @@ label start:
     label toShitOrNotToShit: # that is the question
         menu:
             "Well, do something!"
-            "Take a shit on his desk":
+            "Take a dump on his desk":
                 pass
-            "Don't take a shit on his desk":
+            "Don't take a dump on his desk":
                 clippi "Come on now, I haven't got all day!"
                 jump toShitOrNotToShit
 
@@ -82,7 +82,7 @@ label start:
     underling "If you want to kill Satan, you should be able to find him with this."
     $ have_map = True
 
-    mc "Bruh, I just wanted to get fucked by cute demon girls..."
+    mc "Bruh, I just wanted to get gangbanged by cute demon girls..."
     underling "..."
 
     $ renpy.save("autosave")
@@ -104,13 +104,21 @@ label start:
     play music lust
     play sound elevatorDing
     "You always knew your Guitar Hero skills would save your life one day."
-    "The Hellelevator door slowly slides open to reveal a woman at the desk of a sex shop. She is currently on the phone (in which the receiver is the shape of a banana). You overhear her conversation."
+    "The Hellelevator door slowly slides open to reveal a woman at the desk of what appears to be some sort of sex shop. She is currently on the phone. You overhear her conversation."
     scene bg lust
     show mc lust at right
     show lust normal at left
     with dissolve
 
-    lust "What can I do for you honey? Is it getting hot in here or is it just me? I have some really interesting new content that looks like it might just fit you well!"
+
+    lust "Phew what a workout that was, I don't get cuties like that very often... "
+    lust "Oh sorry I've got a new cutie here gotta go love"
+    lust "hi sweetie and who might you be"
+    mc "[pname]"
+    lust "hehe that's a cute name for a lil cutie"
+    mc "so umm... what's the deal here?"
+    lust "well sweetie, why don't you pick one of these things and we'll see where things go"
+
     "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
     lust "Choose your poison, you nasty little freak!"
     "You slowly spread them out and get an unsettling feeling when you realize the pages are sticky. You carefully inspect the covers: (\"Fun with Buns\", \"Deep 'n' Cheep\", \"Blowin' for Owin\", and \"Smokey or Chokey BBQ\"). How shall you proceed?"
@@ -123,24 +131,21 @@ label start:
             show mc lust at right
             show lust normal at left
             with ease
-            "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure.  Along the way you grab 3 bags of cheeseter's hawt fries."
-        "Choose \"Deep 'n' cheep\" to get more bang for your buck.":
+            lust "nice choice cutie ;)"
+            "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure."
+        "Choose \"Deep 'n' cheap\" to get more bang for your buck.":
             show mc lust at right
             show lust normal at left
             with ease
-            "This magazine is half price but it should still get the job done.  That's what she said!"
+            "This magazine is half price but it should still get the job done.!"
+            lust "oh..."
             jump gameOver
         "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.":
             show mc lust at right
             show lust normal at left
             with ease
             "Oh yeah, the cover on this one is hot as hell and will really pump you up!"
-            jump gameOver
-        "Choose \"Blowin' for Owin\".":
-            show mc lust at right
-            show lust normal at left
-            with ease
-            "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
+            
             jump gameOver
 
     $ renpy.save("autosave")
@@ -167,7 +172,7 @@ label start:
     with dissolve
 
     mc "*coughs and chokes*"
-    gluttony "A'hoy there matey, hope you worked up an appetite!"
+    gluttony "Ahoy there matey, hope you worked up an appetite!"
     "The voice startles you and as the fog clears it reveals the source: a human body with a pig's head, donning a pirate hat and an eye patch at a hot dog stand." #insert picture of scene
     mc "I'm absolutely famished, what's on the menu?"
     gluttony "Arrrr well we've got quite the variety land lubber, let me show you what we've got!"
@@ -219,7 +224,7 @@ label start:
     play music greed_intro noloop
     queue music greed
     #play sound kaching
-    "The Hellevator descends to the next level and instead of a ding you hear the cha-ching of a cash register as the door opens."
+    "The Hellevator descends to the next level"
     "You feel a chill down your spine as you glance at what sits before you behind a card table."
     scene bg greed
     show mc greed at right
@@ -607,6 +612,24 @@ label heaven_fraud:
     show god normal at bigLeft
     with dissolve
 
+    "The Hellevator rapidly ascends and you feel the pressure of 10 g's as you struggle to maintain consciousness."
+    "A ding signifies your arrival and the door opens to reveal two angels infront of large pearly gates."
+    "You reach into your pocket and pull out two freshly printed \"Get out of hell free\" cards."
+    "Motioning to the devil, you say:"
+    mc "He's with me!"
+    "You and the devil sneak past the gardens of eden and through a narrow passageway leading up to a throne room."
+    "God is sitting calmly levitating over the throne, in somewhat of a meditative trance."
+    "The devil hands you a silver dagger."
+    satan "Here, you do it - my conscience is dirty enough already!"
+    "You raise the dagger and prepare to strike with all your might."
+    "God senses your presence and a lightning bolt strikes you in the anus so hard you feel it tingle your brain. The bolt arcs and strikes the devil directly in the kiwis."
+    satan "Ay, ay, ay, no me gusta!"
+    god "I WIN, DIVINE VICTORY!"
+    "The devastating force hurls both you and the devil back into the Hellevator, which promptly plunges back to the bottom level of hell."
+    "You look over at the devil who is still clutching his cojones."
+    mc "Looks like it's just you and me buddy."
+    "You take a bite of your Kit Kat width-wise and settle in for an eternity in hell."
+
     return
 
 label heaven_wrath:
@@ -631,6 +654,25 @@ label heaven_wrath:
     show mc normal at right
     show god normal at bigLeft
     with dissolve
+
+    "As the Hellevator ascends, you welcome your old friends fraud, violence, heresy, wrath, greed & lust from their respective levels."
+    mc "If we pool our resources, nothing will stand in our way from universal domination!"
+    lust "oooh domination, me likey hehehe"
+    "You feel the Hellevator rapidly ascending and suddenly smash the emergency stop button."
+    satan "What the hell are you doing?"
+    mc "I just realized, we forgot something!"
+    heresy "You're right, silly us - we forgot gluttony! We certainly can't do this on an empty stomach!"
+    "You press the hot-dog shaped button to go to the gluttony level."
+    "The door opens and gluttony snorts."
+    gluttony "Let's get it on like donkey kong!"
+    "As gluttony steps into the elevator the doors close but feel uneasy for some reason."
+    "You hear the unmistakable sound of wires fraying and ripping apart."
+    "Looking up at the max weight limit you instantly realize the weight of your error."
+    "The Hellevator cable snaps like a twig and sends the unholy group of avengers plummetting to the deepest level of hell."
+    "Completely destroyed, the Hellevator has escorted its last passengers to the depths of hell."
+    "You collect yourself amongst the wreckage and realize lust is directly ontop of you in what would otherwise be an awkward position."
+    "Lust smiles and winks at you."
+    mc "Well, at least I won't be lonely!"
 
     return
 

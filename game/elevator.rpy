@@ -11,15 +11,22 @@ init python:
             self.sprite = Image("/images/elevator/enemy.png")
             self.delay = delay
             self.show = manager.create(Image("/images/elevator/enemy.png"))
-            self.show.x = -100
-            self.show.y = 115 + note * 150
+            self.show.x = -150
+            if note == 1:
+                self.show.y = 252
+            elif note == 2:
+                self.show.y = 396
+            elif note == 3:
+                self.show.y = 540
+            elif note == 4:
+                self.show.y = 677
             self.moving = False
 
         def update(self, time):
             d = (self.delay - time) * store.speed
-            if d <= 1300:
+            if d <= 1229:
                 self.moving = True
-                self.x = 1300 - d
+                self.x = 1229 - d
             else:
                 pass
 
@@ -39,10 +46,10 @@ init python:
 
     class Player(object):
         def __init__(self):
-            self.sprite = Image("/images/elevator/player.png")
-            self.show = manager.create(Image("/images/elevator/player.png"))
-            self.show.x = 1575
-            self.show.y = 675
+            self.sprite = Image("/images/mc/normal.png")
+            self.show = manager.create(Image("/images/mc/normal.png"))
+            self.show.x = 1200
+            self.show.y = 170
 
         @property
         def x(self):
@@ -78,19 +85,19 @@ init python:
         if ev.type == pygame.KEYDOWN and ev.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4, pygame.K_KP1, pygame.K_KP2, pygame.K_KP3, pygame.K_KP4]:
             player.show.destroy()
             player.show = manager.create(Image("/images/elevator/player_punch.png"))
-            player.x = 1275
-            if ev.key == pygame.K_1 or ev.key == pygame.K_KP1:
-                player.y = 290
-            elif ev.key == pygame.K_2 or ev.key == pygame.K_KP2:
-                player.y = 440
-            elif ev.key == pygame.K_3 or ev.key == pygame.K_KP3:
-                player.y = 590
-            elif ev.key == pygame.K_4 or ev.key == pygame.K_KP4:
-                player.y = 740
+            player.x = 1229
+            if ev.key in [pygame.K_1, pygame.K_KP1]:
+                player.y = 252
+            elif ev.key in [pygame.K_2, pygame.K_KP2]:
+                player.y = 396
+            elif ev.key in [pygame.K_3, pygame.K_KP3]:
+                player.y = 540
+            elif ev.key in [pygame.K_4, pygame.K_KP4]:
+                player.y = 677
 
             hit = False
             for sprite in sprites[:]:
-                if sprite.moving and (ev.key == pygame.K_1 and sprite.y == 265 or ev.key == pygame.K_2 and sprite.y == 415 or ev.key == pygame.K_3 and sprite.y == 565 or ev.key == pygame.K_4 and sprite.y == 715) and int(sprite.x) in store.targets:
+                if sprite.moving and (ev.key in [pygame.K_1, pygame.K_KP1] and sprite.y == 252 or ev.key in [pygame.K_2, pygame.K_KP2] and sprite.y == 396 or ev.key in [pygame.K_3, pygame.K_KP3] and sprite.y == 540 or ev.key in [pygame.K_4, pygame.K_KP4] and sprite.y == 677) and int(sprite.x) in store.targets:
                     update_health(2)
                     hit = True
                     sprite.show.destroy()
@@ -104,9 +111,9 @@ init python:
                 store.song_over = True
 
             player.show.destroy()
-            player.show = manager.create(Image("/images/elevator/player.png"))
-            player.x = 1575
-            player.y = 675
+            player.show = manager.create(Image("/images/mc/normal.png"))
+            player.x = 1200
+            player.y = 170
             renpy.restart_interaction()
 
         if store.song_over:
@@ -127,7 +134,7 @@ screen health:
     bar:
         value health
         range 100
-        xalign 0.5
+        xalign 0.8
 
 label elevator:
     scene bg elevator
@@ -138,43 +145,186 @@ label elevator:
         song_over = False
         manager = SpriteManager(update=sprites_update, event=sprites_event)
         player = Player()
-        targets = set(1300+i for i in xrange(-85, 85))
+        targets = set(1229+i for i in xrange(-300, 300))
 
         if level == 1:
-            duration = 60000 # song ends after 60000ms
-            speed = 1.0 # cosmetic: notes move 1px/ms
+            duration = 69700 # song ends after 60000ms
+            speed = 0.8 # cosmetic: notes move 1px/ms
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(2229, 1),
+                Note(4341, 2),
+                Note(6570, 3),
+                Note(8704, 4),
+                Note(15264, 1),
+                Note(16512, 3),
+                Note(17514, 1),
+                Note(19690, 3),
+                Note(21866, 1),
+                Note(26250, 4),
+                Note(27370, 1),
+                Note(28458, 2),
+                Note(29493, 3),
+                Note(30592, 4),
+                Note(34912, 4),
+                Note(36032, 3),
+                Note(37120, 2),
+                Note(38229, 1),
+                Note(43669, 1),
+                Note(44789, 2),
+                Note(45866, 1),
+                Note(46976, 2),
+                Note(54037, 4),
+                Note(56224, 4),
+                Note(61130, 2),
+                Note(62229, 4),
+                Note(63317, 2),
+                Note(64394, 4),
             ]
         elif level == 2:
-            duration = 60000
-            speed = 1.0
+            duration = 69700
+            speed = 0.8
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(2186, 1),
+                Note(4341, 2),
+                Note(6538, 3),
+                Note(8714, 4),
+                Note(10922, 1),
+                Note(13088, 4),
+                Note(17450, 2),
+                Note(18581, 3),
+                Note(19146, 3),
+                Note(20757, 1),
+                Note(21312, 1),
+                Note(22965, 4),
+                Note(23456, 4),
+                Note(25120, 3),
+                Note(25674, 3),
+                Note(26250, 2),
+                Note(27349, 3),
+                Note(28448, 2),
+                Note(29493, 1),
+                Note(34997, 4),
+                Note(36085, 3),
+                Note(37152, 4),
+                Note(38261, 1),
+                Note(38784, 2),
+                Note(43690, 1),
+                Note(44778, 2),
+                Note(45866, 3),
+                Note(46976, 4),
+                Note(52384, 1),
+                Note(53493, 3),
+                Note(54058, 4),
+                Note(56768, 2),
+                Note(57866, 3),
+                Note(58421, 4),
+                Note(61141, 1),
+                Note(62229, 2),
+                Note(63317, 3),
+                Note(64405, 4)
             ]
         elif level == 3:
-            duration = 60000
-            speed = 1.0
+            duration = 64000
+            speed = 0.8
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(8021, 1),
+                Note(10016, 2),
+                Note(12021, 3),
+                Note(16032, 1),
+                Note(17568, 2),
+                Note(18997, 1),
+                Note(19226, 2),
+                Note(19493, 3),
+                Note(19813, 4),
+                Note(20416, 2),
+                Note(21530, 2),
+                Note(23013, 3),
+                Note(23274, 2),
+                Note(23792, 2),
+                Note(24544, 2),
+                Note(25029, 3),
+                Note(25541, 4),
+                Note(26042, 4),
+                Note(26533, 3),
+                Note(27034, 2),
+                Note(27562, 1),
+                Note(32037, 3),
+                Note(33045, 4),
+                Note(34080, 3),
+                Note(35088 , 1),
+                Note(40032, 2),
+                Note(41034, 1),
+                Note(42037, 4),
+                Note(43082, 3),
+                Note(44042, 1),
+                Note(44384, 2),
+                Note(44757, 3),
+                Note(45077, 1),
+                Note(48042, 1),
+                Note(49536, 4),
+                Note(50026, 1),
+                Note(51520, 4),
+                Note(52032, 1),
+                Note(53546, 4),
+                Note(56042, 1),
+                Note(57077, 2),
+                Note(58048, 3),
+                Note(59040, 4),
             ]
         elif level == 4:
-            duration = 60000
-            speed = 1.0
+            duration = 64000
+            speed = 0.8
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(8021, 1),
+                Note(10016, 2),
+                Note(12021, 3),
+                Note(16032, 1),
+                Note(17568, 2),
+                Note(19483, 2),
+                Note(21516, 2),
+                Note(23013, 3),
+                Note(23274, 2),
+                Note(23536, 1),
+                Note(23792, 2),
+                Note(24032, 1),
+                Note(24544, 2),
+                Note(25029, 3),
+                Note(25541, 4),
+                Note(26042, 4),
+                Note(26533, 3),
+                Note(27034, 2),
+                Note(27562, 1),
+                Note(29516, 3),
+                Note(32037, 3),
+                Note(32516, 2),
+                Note(33045, 4),
+                Note(33500, 2),
+                Note(34080, 3),
+                Note(34516, 2),
+                Note(35088, 1),
+                Note(23274, 2),
+                Note(40032, 2),
+                Note(40500, 2),
+                Note(41034, 1),
+                Note(41500, 1),
+                Note(42037, 4),
+                Note(42516, 4),
+                Note(43082, 3),
+                Note(43483, 3),
+                Note(44042, 1),
+                Note(44384, 2),
+                Note(44757, 3),
+                Note(45077, 1),
+                Note(48042, 1),
+                Note(49536, 4),
+                Note(50026, 1),
+                Note(51520, 4),
+                Note(52032, 1),
+                Note(53546, 4),
+                Note(56042, 1),
+                Note(57077, 2),
+                Note(58048, 3),
+                Note(59040, 4),
             ]
         elif level == 5:
             duration = 60000
