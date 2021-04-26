@@ -7,7 +7,7 @@ define greed     = Character("Greed", color="#000000")
 define wrath     = Character("Wrath", color="#000000")
 define heresy    = Character("Hereshy", color="#000000")
 define violence  = Character("Violence", color="#000000")
-define fraud     = Character("Fraud", color="#000000")
+define fraud     = Character("Trippi", color="#000000")
 define satan     = Character("Satan", color="#000000")
 define god       = Character("God", color="#000000")
 
@@ -61,6 +61,7 @@ define audio.violence        = "/sound/music/violence.ogg"
 define audio.fraud           = "/sound/music/fraud.ogg"
 define audio.treachery_intro = "/sound/music/treachery_intro.ogg"
 define audio.treachery       = "/sound/music/treachery.ogg"
+define audio.heaven          = "/sound/music/heaven.ogg"
 
 define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"

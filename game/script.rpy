@@ -33,7 +33,7 @@ label start:
     mc "Sooo I'm in the bad place then?"
     clippi "You're in Limbo, for now at least."
     mc "Are you sure? Because this seems pretty bad."
-    clippi "Yeah everything is fine."
+    clippi "Yeah this is fine."
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
@@ -47,7 +47,7 @@ label start:
     lust "We're all out of the XXL model, this pandemic has seen a surge in the urge haha!"
     lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
     play sound elevatorDing
-    lust "I'm excited ;)"
+    lust "I'm excited..."
     hide lust normal with dissolve
     show mc lust at right with dissolve
     mc "I know what I must do."
@@ -181,7 +181,7 @@ label start:
             show mc gluttony at right
             show gluttony normal at left
             with ease
-            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out." 
+            "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
             jump gameOver
         "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.":
             show mc gluttony at right
@@ -239,7 +239,7 @@ label start:
             show mc greed at right
             show greed normal at left
             with ease
-            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!" 
+            "After selecting the catapault the image comes to life and you witness the poor soul's demise. Maybe they should be more loyal next time!"
             jump gameOver
         "Shield:  The next card showcases a shield being held by a knight protecting villagers from a dragon's fiery breath.":
             show mc greed at right
@@ -282,10 +282,10 @@ label start:
     show mc wrath at right
     show wrath normal at left
     with dissolve
-    
+
     "After a rapid descent the elevator starts to shake and then comes to an abrupt stop. The doors struggle to open and you step into a maze of thick vines, with the feeling that you are being watched."
     wrath "WHO DOST DISTURBETH ME??!"
-    "Two purple ovals spring open and you realize that the grape vine is speaking to you."
+    "Three purple ovals spring open and you realize that the grape vine is speaking to you."
     mc "It's me, uhhh [pname]."
     wrath "[pname], what a lovely name! You had me worried that it might be the big boss."
     mc "I used to be a boss where I come from."
@@ -299,7 +299,7 @@ label start:
             show mc wrath at right
             show wrath normal at left
             with ease
-            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?" 
+            "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
             jump gameOver
         "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.":
             show mc wrath at right
@@ -342,7 +342,7 @@ label start:
     show heresy normal at left
     with dissolve
 
-    "The Hellevator speeds down to the next level. You take a deep breath as the doors slowly spread open. You do a double-take as what stands before you is a life-size chocolate wrapped in an aluminum foil shell. The thin strip of paper sticking out of it's head wiggles as it begins to speak."
+    "The Hellevator speeds down to the next level. You take a deep breath as the doors slowly spread open. You do a double-take as what stands before you is a life-size chocolate wrapped in an aluminum foil shell. The thin strip of paper sticking out of its head wiggles as it begins to speak."
     heresy "Hey there sweet cheeks, I'm Hereshey Kiss. You've come to the right place!"
     mc "I have?"
     heresy "Of course, you look like a non-believer!"
@@ -359,7 +359,7 @@ label start:
             show mc normal at right
             show heresy normal at left
             with ease
-            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!" 
+            "You open a bag of mini snickers and proceed to smash them with a hammer until there is nothing left but a mess of wrappers and goo. Hereshey kiss looks on in horror and quickly rolls away!"
         "Action 2: Give Hereshey Kiss a kiss.":
             show mc normal at right
             show heresy normal at left
@@ -419,8 +419,8 @@ label start:
             show mc violence at right
             show violence normal at left
             with ease
-            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."  
-            violence "We'll need more weapons for that job!"     
+            "You mark Los Santos on the map and the War Lord shakes his head in disagreement."
+            violence "We'll need more weapons for that job!"
             jump gameOver
         "Liberty City: It somehow reminds you of New Yawk. Word on the street is that crime has increased exponentially as of late.":
             show mc violence at right
@@ -539,7 +539,7 @@ label start:
     show satan normal at menuLeft
     with ease
     menu:
-        "Lust:  Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
+        "Lust: Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
             show mc normal at right
             show paramedic normal at left
             with ease
@@ -558,6 +558,7 @@ label start:
             "After popping the disk into your beige-coloured tower you demonstrate your master plan to challenge the man upstairs."
             mc "See here, all we need to do is use PhotoSlop to forge our papers.  That should get us past the pearly gates and then we can terminate with extreme prejudice."
             "The devil nods in approval and you both head back to the Hellevator."
+            jump heaven_fraud
         "Treachery: Use your mastery of digital manipulation to foil the devil.": #trickdevil
             show mc normal at right
             show satan normal at bigLeft
@@ -579,7 +580,36 @@ label start:
             "Let's bring all of the dream team together and smash our way through Heaven's gates to show 'em who's really boss!"
             satan "Hell to the yeah!"
             "You and Satan hop into the hellevator to assemble the team of unholy avengers that you met on your descent."
+            jump heaven_wrath
 
+    return
+
+label heaven_fraud:
+    $ renpy.save("autosave")
+    hide mc
+    hide satan
+    scene bg black
+    with dissolve
+    play sound elevatorOpen
+    window hide
+    centered "Heaven"
+    window auto
+    "The Hellevator is under attack!"
+
+    $ level = 9
+    call elevator
+
+    scene bg black
+    play music heaven
+    play sound elevatorDing
+    scene bg heaven
+    show mc normal at right
+    show god normal at bigLeft
+    with dissolve
+
+    return
+
+label heaven_wrath:
     $ renpy.save("autosave")
     hide mc
     hide satan
