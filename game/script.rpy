@@ -12,26 +12,54 @@ label start:
     clippi "NEXT!"
     mc "Wha..."
     mc "*Where the hell am I?*"
-    clippi "Read the sign dumbass! Would you like help with that?"
+    clippi "Read the sign dumbass! Would you like some help with that?"
     mc "Huh?"
     show clippi bored at left
-    clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to watch Desperate Housewives."
+    clippi "C'mon dude, my shift's supposed to end in five minutes, and I gotta get home to binge the new season of Desperate Housewives."
 
     python:
         pname = renpy.input("So hurry it up and tell me your name.").strip()
 
-    clippi "Alright [pname], looks like you got creamed by a truck."
+    clippi "Alright [pname], looks like you got hit by a zepplin."
     mc "Wha..."
+    clippi "yeah that's a weird one for sure but whatever you're here now"
+    mc "Whaaaaaaaaaaaaaaaaaaa-"
     clippi "*sigh* Isn't it obvious?"
     clippi "YOU ARE DEAD."
-    mc "Whaaaaaaaaaaaaaaaaaaa-"
-    clippi "WILL YOU STOP THAT?"
-    clippi "*sigh*"
+    mc "sooo where am I?"
     clippi "You're in Limbo, for now at least."
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
     mc "Okay..."
+
+    $ renpy.take_screenshot()
+    $ renpy.save("autosave")
+    hide mc
+    hide clippi
+    scene bg black
+    with dissolve
+
+    scene bg black
+    with dissolve
+    show lust normal at left
+    show mc normal at right
+
+    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge haha!"
+    lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
+    play sound elevatorDing
+    lust "I'm excited"
+    hide lust normal
+    show mc lust at right with dissolve
+    mc "I know what I must do"
+    hide mc lust
+    scene bg black
+    with dissolve
+
+    scene bg limbo
+    show mc lust at right
+    show clippi normal at left
+
 
     label toShitOrNotToShit: # that is the question
         menu:
@@ -49,6 +77,7 @@ label start:
     clippi "Straight to Hell! Do not pass go! Do not collect $200!"
     clippi "In fact, there is a special place in Hell for weird perverts like you: Level B2! Into the Hellevator with you!"
 
+
     "An underling escorts you into the Hellevator..."
     underling "Psst... want to get out of here?"
     underling "You look pretty strong... I bet you could take Satan."
@@ -57,12 +86,9 @@ label start:
     underling "Take this map. It'll help guide you."
     $ have_map = True
 
-    $ renpy.take_screenshot()
-    $ renpy.save("autosave")
-    hide mc
-    hide clippi
-    scene bg black
-    with dissolve
+    mc "bruh I just wanted to get fucked by cute demon girls"
+    underling "..."
+
     play sound elevatorOpen
     play sound fire loop
     "Level B2: Lust"
@@ -79,8 +105,7 @@ label start:
     show lust normal at left
     with dissolve
 
-    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge if you know what I mean!"
-    "She slams the phone down and greets you in a sultry voice."
+
     lust "What can I do for you honey? Is it getting hot in here or is it just me? I have some really interesting new content that looks like it might just fit you well!"
     "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
     lust "Choose your poison, you nasty little freak!"
@@ -163,7 +188,7 @@ label start:
             with ease
             "A fond memory of the riches you earned scalping video cards during a pandemic makes you feel warm and juicy inside."
         "Spring rolls: No ingredients are listed but strangely enough there is a music note.":
-            #play sound rickroll
+            play sound rickroll
             show mc gluttony at right
             show gluttony normal at left
             with ease
@@ -452,6 +477,16 @@ label start:
     satan "I'm afraid that's impossible, your soul is mine FOREVER!"
     mc "Hmmm, well in that case perhaps we can make a deal."
     satan "I'm listening."
+
+#    menu:
+#         "Lust:  Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
+#            "After whispering sweet nothings in his ear, you use every ounce of lust in your body that you learned from Hereshey to please the devil in ways that would make even the most hardened criminal cringe."
+#            "At the moment of his climax and ultimate weakness, you smash his skull with one of the burning coals."
+#            "A deafening shriek echoes into what seems like an eternity and you wake up to the sound of a paramedic."
+#            paramedic:"Welcome back buddy, that was a close call!"
+#            mc:"Whaa, whaat happened?"
+#            paramedic:"It was a hit n run but you're all gucci now!"
+#            mc:"Thanks mate! I just had the strangest near-death experience."
 
     # Ending A: Kill Satan
 

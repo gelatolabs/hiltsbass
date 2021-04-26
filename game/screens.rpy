@@ -106,9 +106,9 @@ screen say(who, what):
             window:
                 id "namebox"
                 style "namebox"
-                text who id "who"
+                text who id "who" yoffset 40
 
-        side "c r" pos (364, 70) xysize (1192, 130):
+        side "c r" pos (364, 110) xysize (1192, 130):
             viewport id "vp" mousewheel True:
                 draggable True
                 text what id "what"

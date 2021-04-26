@@ -52,6 +52,9 @@ define audio.fire         = "/sound/music/fire.ogg"
 define audio.elevatorOpen = "/sound/sfx/elevatorOpen.ogg"
 define audio.elevatorDing = "/sound/sfx/elevatorDing.ogg"
 define audio.cannibal     = "/sound/sfx/cannibal.ogg"
+define audio.rickroll     = "/sound/sfx/rickroll.ogg"
+define audio.evilLaugh    = "/sound/sfx/evilLaugh.ogg"
+define audio.waterArson   = "/sound/sfx/waterArson.ogg"
 
 transform left:
     pos (0, 0.1)
