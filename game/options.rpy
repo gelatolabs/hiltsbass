@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("ld48")
+define config.name = _("How I Learned To Stop Breathing and Start Sinning")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -29,7 +29,25 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""A Gelato Labs Production for Ludum Dare 48 {i}(Deeper and Deeper){/i}
+
+The Gelato Labs "G-Team" for LD48:\n\n
+
+{b}Programming:{/b}\n
+{i}Kyle Farwell (kfarwell){/i}\n\n
+
+{b}Art:{/b}\n
+{i}Fuugul{/i}, {i}Matthew Petry (fireTwoOneNine){/i}\n\n
+
+{b}Music:{/b}\n
+{i}Alice Dalton (Aliciana){/i}\n\n
+
+{b}Sound:{/b}\n
+{i}Matthew Petry (fireTwoOneNine){/i}\n\n
+
+{b}Writing:{/b}\n
+{i}Kyle Farwell (kfarwell), Phil St. Antoine (Squid), Ryan Refcio{/i}
+
 """)
 
 
@@ -37,7 +55,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "ld48"
+define build.name = "gelato_ld48"
 
 
 ## Sounds and music ############################################################

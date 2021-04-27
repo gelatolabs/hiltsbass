@@ -61,7 +61,7 @@ define gui.text_font = "gui/NewTegomin-Regular.ttf"
 define gui.name_text_font = "gui/BrazierFlame.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "gui/Isabella.ttf"
+define gui.interface_text_font = "gui/NewTegomin-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
