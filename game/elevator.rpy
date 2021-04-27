@@ -70,7 +70,7 @@ init python:
         for sprite in sprites[:]:
             sprite.update(time)
             if sprite.x > config.screen_width:
-                update_health(-10)
+                update_health(-5)
                 sprite.show.destroy()
                 sprites.remove(sprite)
                 renpy.restart_interaction()
@@ -98,13 +98,13 @@ init python:
             hit = False
             for sprite in sprites[:]:
                 if sprite.moving and (ev.key in [pygame.K_1, pygame.K_KP1] and sprite.y == 252 or ev.key in [pygame.K_2, pygame.K_KP2] and sprite.y == 396 or ev.key in [pygame.K_3, pygame.K_KP3] and sprite.y == 540 or ev.key in [pygame.K_4, pygame.K_KP4] and sprite.y == 677) and int(sprite.x) in store.targets:
-                    update_health(2)
+                    update_health(1)
                     hit = True
                     sprite.show.destroy()
                     sprites.remove(sprite)
                     break
             if not hit:
-                update_health(-10)
+                update_health(-5)
             renpy.restart_interaction()
         elif ev.type == pygame.KEYUP:
             if ev.key == pygame.K_0: # debug skip
@@ -398,13 +398,53 @@ label elevator:
                 Note(57133, 1)
             ]
         elif level == 7:
-            duration = 60000
+            duration = 61440
             speed = 1.0
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(1920, 1),
+                Note(3840, 2),
+                Note(5760, 3),
+                Note(4567, 4),
+                Note(15360, 2),
+                Note(15840, 3),
+                Note(18720, 4),
+                Note(19200, 2),
+                Note(19680, 3),
+                Note(23040, 1),
+                Note(23520, 2),
+                Note(24000, 4),
+                Note(24480, 3),
+                Note(24960, 4),
+                Note(25440, 3),
+                Note(25920, 3),
+                Note(26400, 4),
+                Note(27360, 2),
+                Note(30720, 3),
+                Note(31680, 4),
+                Note(34080, 1),
+                Note(36000, 2),
+                Note(36106, 3),
+                Note(36266, 4),
+                Note(36394, 2),
+                Note(38400, 1),
+                Note(38784, 2),
+                Note(39136, 3),
+                Note(39498, 4),
+                Note(39872, 1),
+                Note(40149, 2),
+                Note(40597, 3),
+                Note(40842, 4),
+                Note(41312, 1),
+                Note(41493, 2),
+                Note(41749, 1),
+                Note(41994, 4),
+                Note(46080, 3),
+                Note(46560, 4),
+                Note(49440, 1),
+                Note(53760, 4),
+                Note(54240, 3),
+                Note(57120, 1),
+                Note(58080, 2)
             ]
         elif level == 8:
             duration = 60000

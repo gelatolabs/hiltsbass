@@ -147,8 +147,8 @@ label start:
     lust "You have good taste sweetie... you know what, I'll give you a reward."
 
     scene bg lust with fade
-    show mc lust at menuRight
-    show lust normal at menuLeft
+    show mc lust at right
+    show lust normal at left
     with dissolve
 
     lust "Hehe not bad, let me know if you ever need something and I'll give you a hand."
