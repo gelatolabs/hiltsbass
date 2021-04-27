@@ -80,6 +80,11 @@ define audio.rickroll     = "/sound/sfx/rickroll.ogg"
 define audio.evilLaugh    = "/sound/sfx/evilLaugh.ogg"
 define audio.waterArson   = "/sound/sfx/waterArson.ogg"
 
+image gelato = "images/gelato.png"
+
+image LDtext:
+    Text("Made for Ludum Dare 48 \n{i}Deeper and Deeper{/i}")
+
 transform left:
     pos (0, 0.12)
 

@@ -4,6 +4,15 @@
 
 init offset = -1
 
+label splashscreen:
+    scene black
+    show gelato at truecenter with Dissolve(0.5, alpha=True)
+    pause 2.0
+    hide gelato with Dissolve(0.5, alpha=True)
+    show LDtext at truecenter with Dissolve(0.5, alpha=True)
+    pause 2.0
+    hide LDtext with Dissolve(0.5, alpha=True)
+    return
 
 ################################################################################
 ## Styles
