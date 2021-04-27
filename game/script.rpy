@@ -40,7 +40,7 @@ label start:
     mc "Okay..."
 
     scene bg black
-    show lust normal at left
+    show lust banana at left
     show mc normal at right
     with dissolve
 
@@ -48,7 +48,7 @@ label start:
     lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
     play sound elevatorDing
     lust "I'm excited..."
-    hide lust normal with dissolve
+    hide lust banana with dissolve
     show mc lust at right with dissolve
     mc "I know what I must do."
 
@@ -76,6 +76,7 @@ label start:
 
     scene bg black
     show mc normal at right
+    show underling normal at left
     with dissolve
     "An underling escorts you into the Hellevator..."
     underling "Take this map."
@@ -87,7 +88,7 @@ label start:
 
     $ renpy.save("autosave")
     hide mc
-    hide clippi
+    hide underling
     scene bg black
     with dissolve
     play sound elevatorOpen
@@ -110,16 +111,15 @@ label start:
     show lust normal at left
     with dissolve
 
-
-    lust "Phew what a workout that was, I don't get cuties like that very often... "
-    lust "Oh sorry I've got a new cutie here gotta go love"
+    lust "Phew what a workout that was, I don't get guys like that very often... "
+    lust "Oh sorry I've got a new cutie here, gotta go love"
     lust "hi sweetie and who might you be"
     mc "[pname]"
     lust "hehe that's a cute name for a lil cutie"
     mc "so umm... what's the deal here?"
     lust "well sweetie, why don't you pick one of these things and we'll see where things go"
 
-    "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
+    "She presents a stack of 3 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
     lust "Choose your poison, you nasty little freak!"
     "You slowly spread them out and get an unsettling feeling when you realize the pages are sticky. You carefully inspect the covers: (\"Fun with Buns\", \"Deep 'n' Cheep\", \"Blowin' for Owin\", and \"Smokey or Chokey BBQ\"). How shall you proceed?"
 
@@ -138,15 +138,28 @@ label start:
             show lust normal at left
             with ease
             "This magazine is half price but it should still get the job done.!"
-            lust "oh..."
+            lust "...sweetie no"
             jump gameOver
         "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.":
             show mc lust at right
             show lust normal at left
             with ease
-            "Oh yeah, the cover on this one is hot as hell and will really pump you up!"
-            
+            "sweetie, I like it rough but not like that"
             jump gameOver
+
+    lust "You have good taste sweetie... you know what, I'll give you a reward"
+    hide mc
+    hide lust
+    scene bg black
+    with dissolve
+    $ renpy.save("autosave")
+
+    scene bg lust
+    show mc lust at menuRight
+    show lust normal at menuLeft
+    with ease
+
+    lust "hehe not bad, let me know if you ever need something and I'll give you a hand"
 
     $ renpy.save("autosave")
     hide mc
@@ -187,12 +200,6 @@ label start:
             show gluttony normal at left
             with ease
             "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
-            jump gameOver
-        "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.":
-            show mc gluttony at right
-            show gluttony normal at left
-            with ease
-            "After downing the whole pizza you feel like you have somehow violated someone's personal data and go back to the hellevator."
             jump gameOver
         "Scalper scallops:  Special of the day, all you can scalp!!": #win
             show mc gluttony at right
@@ -471,19 +478,20 @@ label start:
 
     "After a short drop and a sudden stop, the hellevator doors squeak open to reveal a somewhat familiar face. Behind a desk sits a sleightly bent out of shape paper clip wearing a rastacap."
     fraud "Hey mon, how are you doing? Welcome to dee next level right?"
-    mc "Hell yeah!"
-    fraud "I be Trippi, you may have met my cousin CLIPPI up in Limbo."
+    mc "Clippi? what happened to you?"
+    fraud "Nah mon I be Trippi, you may probably met my cousin CLIPPI up in Limbo."
     mc "Yes, it was a pleasure. I left something from my behind for him."
     fraud "How kind and thoughtful! You have made great progress, hopefully you're up for your final test!"
-    mc "Hit me with your best shot!"
-    fraud "Alright [pname], let's see how low you can really go! I'm afraid our lead software engineer recently met his demise. Help us get out of this jam!"
-    "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."
+    mc "As far as I can tell from these \"tests\" I think I can handle it!"
+    fraud "Alright mon, let's see how low you can really go! I'm afraid our lead software engineer recently went insane and took up knitting. Help us get out of this jam!"
+    "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."\
+    fraud "all these files are zipped up and I don't know what to do"
 
     show mc fraud at menuRight
     show fraud normal at menuLeft
     with ease
     menu:
-         "MyScrewSoft WinBlows 95: There's a sticky (literally) note indicating that the key has been lost. You must crack it to perform a reinstall.":
+         "MyScrewSoft WinBlows 95: There's a sticky note indicating that the key has been lost. You must crack it to perform a reinstall.":
             show mc fraud at right
             show fraud normal at left
             with ease
@@ -494,13 +502,13 @@ label start:
             show fraud normal at left
             with ease
             "Knowing well that a special place in hell is reserved for such perfidy, you easily patch and crack the beloved software and Trippi is happily browsing archives of questionable content."
-         "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore. Help him out by restoring this ability.":
+         "Adoobie PhotoSlop 3.0: Trippi is frustrated that he can't edit his cat pictures anymore.":
             show mc fraud at right
             show fraud normal at left
             with ease
             "The software reminds me of you a more \"civilized\" era when licenses were perpetual instead of monthly fees. Your good deed does not go unnoticed."
             jump gameOver
-         "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell. It looks like it has been very well used.":
+         "BROOM 3D: A timeless classic, the witch on the cover looks as though she has slain many beings from the depths of hell.":
             show mc fraud at right
             show fraud normal at left
             with ease
@@ -608,8 +616,8 @@ label heaven_fraud:
     play music heaven
     play sound elevatorDing
     scene bg heaven
-    show mc normal at right
-    show god normal at bigLeft
+    show mc normal at right 
+    show satan normal at bigLeft
     with dissolve
 
     "The Hellevator rapidly ascends and you feel the pressure of 10 g's as you struggle to maintain consciousness."
@@ -622,6 +630,8 @@ label heaven_fraud:
     "The devil hands you a silver dagger."
     satan "Here, you do it - my conscience is dirty enough already!"
     "You raise the dagger and prepare to strike with all your might."
+
+    show god angry at left
     "God senses your presence and a lightning bolt strikes you in the anus so hard you feel it tingle your brain. The bolt arcs and strikes the devil directly in the kiwis."
     satan "Ay, ay, ay, no me gusta!"
     god "I WIN, DIVINE VICTORY!"
@@ -651,26 +661,34 @@ label heaven_wrath:
     play music heaven
     play sound elevatorDing
     scene bg heaven
-    show mc normal at right
-    show god normal at bigLeft
+    show mc normal at right 
+    show lust normal at left
     with dissolve
 
     "As the Hellevator ascends, you welcome your old friends fraud, violence, heresy, wrath, greed & lust from their respective levels."
     mc "If we pool our resources, nothing will stand in our way from universal domination!"
-    lust "oooh domination, me likey hehehe"
+    lust "oooh domination hehe"
     "You feel the Hellevator rapidly ascending and suddenly smash the emergency stop button."
+
+    show satan normal at bigLeft with dissolve
     satan "What the hell are you doing?"
     mc "I just realized, we forgot something!"
+
+    show heresy normal at left with dissolve
     heresy "You're right, silly us - we forgot gluttony! We certainly can't do this on an empty stomach!"
     "You press the hot-dog shaped button to go to the gluttony level."
     "The door opens and gluttony snorts."
+
+    show gluttony normal at left with dissolve
     gluttony "Let's get it on like donkey kong!"
     "As gluttony steps into the elevator the doors close but feel uneasy for some reason."
     "You hear the unmistakable sound of wires fraying and ripping apart."
     "Looking up at the max weight limit you instantly realize the weight of your error."
     "The Hellevator cable snaps like a twig and sends the unholy group of avengers plummetting to the deepest level of hell."
     "Completely destroyed, the Hellevator has escorted its last passengers to the depths of hell."
-    "You collect yourself amongst the wreckage and realize lust is directly ontop of you in what would otherwise be an awkward position."
+    "You wake up amongst the wreckage and realize lust is directly ontop of you"
+    
+    show lust normal at left with dissolve
     "Lust smiles and winks at you."
     mc "Well, at least I won't be lonely!"
 
