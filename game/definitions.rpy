@@ -10,33 +10,37 @@ define violence  = Character("Violence", color="#000000")
 define fraud     = Character("Trippi", color="#000000")
 define satan     = Character("Satan", color="#000000")
 define god       = Character("God", color="#000000")
+define paramedic = Character("Paramedic", color="#000000")
 
-image mc normal        = "/images/mc/normal.png"
-image mc lust          = "/images/mc/lust.png"
-image mc gluttony      = "/images/mc/gluttony.png"
-image mc greed         = "/images/mc/greed.png"
-image mc wrath         = "/images/mc/wrath.png"
-image mc violence      = "/images/mc/violence.png"
-image mc fraud         = "/images/mc/fraud.png"
-image clippi normal    = "/images/clippi/normal.png"
-image clippi bored     = "/images/clippi/bored.png"
-image clippi angry     = "/images/clippi/angry.png"
-image underling normal = "/images/underling/normal.png"
-image lust normal      = "/images/lust/normal.png"
-image lust banana      = "/images/lust/banana.png"
-image gluttony normal  = "/images/gluttony/normal.png"
-image greed normal     = "/images/greed/normal.png"
-image wrath normal     = "/images/wrath/normal.png"
-image heresy normal    = "/images/heresy/normal.png"
-image violence normal  = "/images/violence/normal.png"
-image fraud normal     = "/images/fraud/normal.png"
-image satan normal     = "/images/satan/normal.png"
-image satan angry      = "/images/satan/angry.png"
-image satan dead       = "/images/satan/dead.png"
-image god normal       = "/images/god/normal.png"
-image god angry        = "/images/god/angry.png"
-image god annoyed      = "/images/god/annoyed.png"
-image god dead         = "/images/god/dead.png"
+image mc normal         = "/images/mc/normal.png"
+image mc normal flipped = "/images/mc/normal_flipped.png"
+image mc lust           = "/images/mc/lust.png"
+image mc gluttony       = "/images/mc/gluttony.png"
+image mc greed          = "/images/mc/greed.png"
+image mc wrath          = "/images/mc/wrath.png"
+image mc violence       = "/images/mc/violence.png"
+image mc fraud          = "/images/mc/fraud.png"
+image clippi normal     = "/images/clippi/normal.png"
+image clippi bored      = "/images/clippi/bored.png"
+image clippi angry      = "/images/clippi/angry.png"
+image underling normal  = "/images/underling/normal.png"
+image lust normal       = "/images/lust/normal.png"
+image lust banana       = "/images/lust/banana.png"
+image gluttony normal   = "/images/gluttony/normal.png"
+image gluttony normal flipped = "/images/gluttony/normal_flipped.png"
+image greed normal      = "/images/greed/normal.png"
+image wrath normal      = "/images/wrath/normal.png"
+image heresy normal     = "/images/heresy/normal.png"
+image violence normal   = "/images/violence/normal.png"
+image fraud normal      = "/images/fraud/normal.png"
+image satan normal      = "/images/satan/normal.png"
+image satan angry       = "/images/satan/angry.png"
+image satan dead        = "/images/satan/dead.png"
+image god normal        = "/images/god/normal.png"
+image god angry         = "/images/god/angry.png"
+image god angry flipped = "/images/god/angry_flipped.png"
+image god annoyed       = "/images/god/annoyed.png"
+image god dead          = "/images/god/dead.png"
 
 image bg black     = "#000000"
 image bg limbo     = "/images/bg/limbo.png"
@@ -90,3 +94,16 @@ transform menuRight:
 
 transform bigLeft:
     pos (0, 0.03)
+
+transform leftish:
+    pos (0.2, 0.12)
+
+transform rightish:
+    pos (0.45, 0.12)
+
+transform center:
+    pos (0.5, 0.12)
+    xalign 0.5
+
+transform righter:
+    pos (0.7, 0.12)
