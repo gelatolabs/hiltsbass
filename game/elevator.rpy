@@ -70,7 +70,7 @@ init python:
         for sprite in sprites[:]:
             sprite.update(time)
             if sprite.x > config.screen_width:
-                update_health(-10)
+                update_health(-5)
                 sprite.show.destroy()
                 sprites.remove(sprite)
                 renpy.restart_interaction()
@@ -98,13 +98,13 @@ init python:
             hit = False
             for sprite in sprites[:]:
                 if sprite.moving and (ev.key in [pygame.K_1, pygame.K_KP1] and sprite.y == 252 or ev.key in [pygame.K_2, pygame.K_KP2] and sprite.y == 396 or ev.key in [pygame.K_3, pygame.K_KP3] and sprite.y == 540 or ev.key in [pygame.K_4, pygame.K_KP4] and sprite.y == 677) and int(sprite.x) in store.targets:
-                    update_health(2)
+                    update_health(1)
                     hit = True
                     sprite.show.destroy()
                     sprites.remove(sprite)
                     break
             if not hit:
-                update_health(-10)
+                update_health(-5)
             renpy.restart_interaction()
         elif ev.type == pygame.KEYUP:
             if ev.key == pygame.K_0: # debug skip

@@ -26,7 +26,7 @@ label start:
 
     clippi "Alright [pname], looks like you got hit by a zepplin."
     mc "Wha..."
-    clippi "Yeah that's a weird one for sure but whatever you're here now"
+    clippi "Yeah that's a weird one for sure but whatever you're here now."
     mc "Whaaaaaaaaaaaaaaaaaaa-"
     clippi "*sigh* Isn't it obvious?"
     clippi "YOU ARE DEAD."
@@ -37,25 +37,24 @@ label start:
     clippi "We gotta figure out if you're fit to go meet the big man in the sky or not."
     mc "And how do we figure that out?"
     clippi "Well, we're just gonna wait around until you do something that's either Heaven-worthy or Hell-worthy."
-    mc "Okay..."
+  #  mc "Okay..."
 
-    scene bg black
-    show lust banana at left
-    show mc normal at right
-    with dissolve
+ #   show lust banana at left
+ #   show mc normal at right
+ #   with dissolve
 
-    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge haha!"
-    lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
-    play sound elevatorDing
-    lust "I'm excited..."
-    hide lust banana with dissolve
-    show mc lust at right with dissolve
-    mc "I know what I must do."
+ #   lust "We're all out of the XXL model, this pandemic has seen a surge in the urge haha!"
+ #   lust "Yeah I'm on my way back down now, I've got a few cute toys to play with...."
+ #   play sound elevatorDing
+ #   lust "I'm excited..."
+ #   hide lust banana with dissolve
+ #   show mc lust at right with dissolve
+ #   mc "I know what I must do."
 
-    scene bg limbo
-    show mc lust at right
-    show clippi normal at left
-    with dissolve
+ #   scene bg limbo
+ #   show mc lust at right
+ #   show clippi normal at left
+ #   with dissolve
 
     mc "Well, here goes nothing..."
 
@@ -79,12 +78,13 @@ label start:
     show underling normal at left
     with dissolve
     "An underling escorts you into the Hellevator..."
-    underling "Take this map."
-    underling "If you want to kill Satan, you should be able to find him with this."
+    underling "Psst... want to get out of here?"
+    underling "You look pretty strong... I bet you could take Satan."
+    underling "Just keep sinning and make your way {b}deeper and deeper{/b} down into the depths of Hell."
+    underling "Satan usually hangs out down in B9. Go fuck him up and you should be able to escape."
+    underling "Your first stop is B2: Lust. You'll need to find a way to get yourself sent down to B3: Gluttony... just go do something gluttonous!"
+    underling "Take this map. It'll help guide you through the lower levels. Good luck!"
     $ have_map = True
-
-    mc "Bruh, I just wanted to get gangbanged by cute demon girls..."
-    underling "..."
 
     $ renpy.save("autosave")
     scene bg black with dissolve
@@ -102,21 +102,22 @@ label start:
     play music lust
     play sound elevatorDing
     "You always knew your Guitar Hero skills would save your life one day."
-    "The Hellelevator door slowly slides open to reveal a woman at the desk of what appears to be some sort of sex shop. She is currently on the phone. You overhear her conversation."
+    
+    
+   
     scene bg lust
     show mc lust at right
-    show lust normal at left
+    show lust banana at left
     with dissolve
+    "The Hellelevator door slowly slides open to reveal a woman at the desk of what appears to be some sort of sex shop. You overhear her conversation."
+    lust "We're all out of the XXL model, this pandemic has seen a surge in the urge if you know what I mean!"  
+    "She slams the phone down and greets you in a sultry voice."
+    lust "What can I do for you honey?  Is it getting hot in here or is it just me?  I have some really interesting new content that looks like it might just fit you well!"  
+    "She presents a stack of 4 different magazines on the desk infront of you."
+    lust "Choose your poison, you nasty little freak!" 
 
-    lust "Phew what a workout that was, I don't get guys like that very often... "
-    lust "Oh sorry I've got a new cutie here, gotta go love"
-    lust "hi sweetie and who might you be"
-    mc "[pname]"
-    lust "hehe that's a cute name for a lil cutie"
-    mc "so umm... what's the deal here?"
-    lust "well sweetie, why don't you pick one of these things and we'll see where things go"
 
-    "She presents a stack of 3 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
+    "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
     lust "Choose your poison, you nasty little freak!"
     "You slowly spread them out and get an unsettling feeling when you realize the pages are sticky. You carefully inspect the covers: (\"Fun with Buns\", \"Deep 'n' Cheep\", \"Blowin' for Owin\", and \"Smokey or Chokey BBQ\"). How shall you proceed?"
 
@@ -129,12 +130,12 @@ label start:
             show lust normal at left
             with ease
             lust "nice choice cutie ;)"
-            "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure."
+            "You grab the \"Fun with Buns\" magazine and head to the restroom to relieve yourself of some pressure. Along the way you grab 3 bags of cheeseter's hawt fries."
         "Choose \"Deep 'n' cheap\" to get more bang for your buck.":
             show mc lust at right
             show lust normal at left
             with ease
-            "This magazine is half price but it should still get the job done.!"
+            "This magazine is half price but it should still get the job done.! That's what she said!"
             lust "...sweetie no"
             jump gameOver
         "Choose \"Smokey or Chokey\" because gag reflexes are foreign to you.":
@@ -143,7 +144,13 @@ label start:
             with ease
             "sweetie, I like it rough but not like that"
             jump gameOver
-
+        "Choose \"Blowin for owin\" because gag reflexes are foreign to you.":
+            show mc lust at right
+            show lust normal at left
+            with ease
+            "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
+            jump gameOver
+            
     lust "You have good taste sweetie... you know what, I'll give you a reward."
 
     scene bg lust with fade
@@ -151,7 +158,7 @@ label start:
     show lust normal at left
     with dissolve
 
-    lust "Hehe not bad, let me know if you ever need something and I'll give you a hand."
+    lust "Hehe not bad, let me know if you ever need something and I'll give you a hand, or maybe two."
 
     $ renpy.save("autosave")
     scene bg black with dissolve
