@@ -178,7 +178,7 @@ label elevator:
                 Note(61130, 2),
                 Note(62229, 4),
                 Note(63317, 2),
-                Note(64394, 4),
+                Note(64394, 4)
             ]
         elif level == 2:
             duration = 69700
@@ -269,7 +269,7 @@ label elevator:
                 Note(56042, 1),
                 Note(57077, 2),
                 Note(58048, 3),
-                Note(59040, 4),
+                Note(59040, 4)
             ]
         elif level == 4:
             duration = 64000
@@ -324,7 +324,7 @@ label elevator:
                 Note(56042, 1),
                 Note(57077, 2),
                 Note(58048, 3),
-                Note(59040, 4),
+                Note(59040, 4)
             ]
         elif level == 5:
             duration = 60000
@@ -336,13 +336,66 @@ label elevator:
                 Note(4567, 4)
             ]
         elif level == 6:
-            duration = 60000
+            duration = 61000
             speed = 1.0
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(1933, 1),
+                Note(3883, 2),
+                Note(5750, 3),
+                Note(15383, 1),
+                Note(15833, 2),
+                Note(16100, 2),
+                Note(16566, 1),
+                Note(16983, 2),
+                Note(17300, 3),
+                Note(17766, 4),
+                Note(18050, 4),
+                Note(19233, 1),
+                Note(19683, 3),
+                Note(19966, 3),
+                Note(21166, 2),
+                Note(21650, 4),
+                Note(21866, 4),
+                Note(22833, 1),
+                Note(23283, 1),
+                Note(23616, 2),
+                Note(24083, 3),
+                Note(24466, 4),
+                Note(25216, 1),
+                Note(25516, 2),
+                Note(25966, 3),
+                Note(26400, 4),
+                Note(27150, 2),
+                Note(29066, 1),
+                Note(30816, 1),
+                Note(31216, 2),
+                Note(31750, 3),
+                Note(32166, 3),
+                Note(34550, 2),
+                Note(35616, 3),
+                Note(36466, 2),
+                Note(37450, 4),
+                Note(38683, 2),
+                Note(39033, 2),
+                Note(40583, 1),
+                Note(40983, 2),
+                Note(42500, 1),
+                Note(42866, 2),
+                Note(43316, 1),
+                Note(43950, 3),
+                Note(44416, 1),
+                Note(44733, 2),
+                Note(45150, 4),
+                Note(45600, 4),
+                Note(45900, 3),
+                Note(53750, 1),
+                Note(54250, 2),
+                Note(54700, 3),
+                Note(55183, 4),
+                Note(55733, 4),
+                Note(56233, 3),
+                Note(56650, 2),
+                Note(57133, 1)
             ]
         elif level == 7:
             duration = 60000
@@ -363,13 +416,87 @@ label elevator:
                 Note(4567, 4)
             ]
         elif level == 9:
-            duration = 60000
+            duration = 56888
             speed = 1.0
             sprites = [
-                Note(1234, 1),
-                Note(2345, 2),
-                Note(3456, 3),
-                Note(4567, 4)
+                Note(7111, 1),
+                Note(10666, 2),
+                Note(14208, 1),
+                Note(14666, 2),
+                Note(15114, 1),
+                Note(15552, 2),
+                Note(15989, 3),
+                Note(16437, 4),
+                Note(16885, 3),
+                Note(17322, 4),
+                Note(17777, 1),
+                Note(17984, 2),
+                Note(18229, 1),
+                Note(18464, 2),
+                Note(18666, 1),
+                Note(18901, 1),
+                Note(19125, 1),
+                Note(19370, 2),
+                Note(19552, 1),
+                Note(19808, 2),
+                Note(20000, 3),
+                Note(20234, 4),
+                Note(20448, 1),
+                Note(20661, 2),
+                Note(20885, 3),
+                Note(21109, 4),
+                Note(21333, 1),
+                Note(21770, 2),
+                Note(22218, 1),
+                Note(22666, 4),
+                Note(23114, 1),
+                Note(23562, 2),
+                Note(24000, 1),
+                Note(24437, 1),
+                Note(24885, 1),
+                Note(25120, 2),
+                Note(25333, 3),
+                Note(25578, 4),
+                Note(25792, 4),
+                Note(26016, 3),
+                Note(26208, 2),
+                Note(26453, 1),
+                Note(28437, 4),
+                Note(30208, 4),
+                Note(23000, 2),
+                Note(33792, 2),
+                Note(35555, 3),
+                Note(35904, 3),
+                Note(36266, 2),
+                Note(36896, 3),
+                Note(37216, 4),
+                Note(37589, 4),
+                Note(38240, 4),
+                Note(38485, 3),
+                Note(38666, 2),
+                Note(38933, 1),
+                Note(40444, 1),
+                Note(41770, 2),
+                Note(41952, 3),
+                Note(42229, 4),
+                Note(42517, 1),
+                Note(42677, 1),
+                Note(43125, 2),
+                Note(43555, 1),
+                Note(44000, 2),
+                Note(44444, 1),
+                Note(44888, 2),
+                Note(45333, 3),
+                Note(45777, 4),
+                Note(46222, 3),
+                Note(46666, 4),
+                Note(47111, 3),
+                Note(47555, 4),
+                Note(48000, 1),
+                Note(48444, 2),
+                Note(48888, 3),
+                Note(49333, 4),
+                Note(49777, 1)
             ]
         elif level == satan:
             duration = 60000

@@ -55,7 +55,7 @@ label start:
     scene bg limbo
     show mc lust at right
     show clippi normal at left
-    with fade
+    with dissolve
 
     mc "Well, here goes nothing..."
 
@@ -87,10 +87,7 @@ label start:
     underling "..."
 
     $ renpy.save("autosave")
-    hide mc
-    hide underling
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     play sound fire loop
     window hide
@@ -147,25 +144,17 @@ label start:
             "sweetie, I like it rough but not like that"
             jump gameOver
 
-    lust "You have good taste sweetie... you know what, I'll give you a reward"
-    hide mc
-    hide lust
-    scene bg black
-    with dissolve
-    $ renpy.save("autosave")
+    lust "You have good taste sweetie... you know what, I'll give you a reward."
 
-    scene bg lust
+    scene bg lust with fade
     show mc lust at menuRight
     show lust normal at menuLeft
-    with ease
+    with dissolve
 
-    lust "hehe not bad, let me know if you ever need something and I'll give you a hand"
+    lust "Hehe not bad, let me know if you ever need something and I'll give you a hand."
 
     $ renpy.save("autosave")
-    hide mc
-    hide lust
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B3: Gluttony"
@@ -201,6 +190,12 @@ label start:
             with ease
             "As you sink your teeth into the cheesecake you feel a crunch as the kidney stone fragments do their work and you pass out."
             jump gameOver
+        "Huawei'n pizza:  Experience a taste of the orient, all ingredients and information sourced from international origins. (8 slices).  1,000 calories per slice.":
+            show mc gluttony at right
+            show gluttony normal at left
+            with ease
+            "After downing the whole pizza you feel like you have somehow violated someone's personal data and go back to the hellevator."
+            jump gameOver
         "Scalper scallops:  Special of the day, all you can scalp!!": #win
             show mc gluttony at right
             show gluttony normal at left
@@ -214,10 +209,7 @@ label start:
             jump gameOver
 
     $ renpy.save("autosave")
-    hide mc
-    hide gluttony
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B4: Greed"
@@ -274,10 +266,7 @@ label start:
             greed "Third time this week!"
 
     $ renpy.save("autosave")
-    hide mc
-    hide greed
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B5: Wrath"
@@ -333,18 +322,15 @@ label start:
             wrath "In all my ears in this vine I have never witnessed such heresy, feel my wrath!!"
 
     $ renpy.save("autosave")
-    hide mc
-    hide wrath
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B6: Heresy"
     window auto
-    "The Hellevator is under attack!"
+    #"The Hellevator is under attack!"
 
-    $ level = 5
-    call elevator
+    #$ level = 5
+    #call elevator
 
     scene bg black
     play music heresy
@@ -393,10 +379,7 @@ label start:
             jump gameOver
 
     $ renpy.save("autosave")
-    hide mc
-    hide heresy
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B7: Violence"
@@ -455,10 +438,7 @@ label start:
             violence "Yes, we shall strike at dawn and rain hell down upon this fradulent scum!"
 
     $ renpy.save("autosave")
-    hide mc
-    hide violence
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B8: Fraud"
@@ -484,7 +464,7 @@ label start:
     fraud "How kind and thoughtful! You have made great progress, hopefully you're up for your final test!"
     mc "As far as I can tell from these \"tests\" I think I can handle it!"
     fraud "Alright mon, let's see how low you can really go! I'm afraid our lead software engineer recently went insane and took up knitting. Help us get out of this jam!"
-    "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."\
+    "Trippi dusts off a box labelled 1995, removes some floppy dicks and places them infront of you."
     fraud "all these files are zipped up and I don't know what to do"
 
     show mc fraud at menuRight
@@ -516,18 +496,15 @@ label start:
             jump gameOver
 
     $ renpy.save("autosave")
-    hide mc
-    hide fraud
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Level B9: Treachery"
     window auto
-    "The Hellevator is under attack!"
+    #"The Hellevator is under attack!"
 
-    $ level = 8
-    call elevator
+    #$ level = 8
+    #call elevator
 
     scene bg black
     play music treachery_intro noloop
@@ -553,11 +530,13 @@ label start:
     with ease
     menu:
         "Lust: Seduce the devil to cloud his mind and take advantage of his weakness.": #trickdevil
+            show satan dead at bigLeft
             show mc normal at right
-            show paramedic normal at left
+            #show paramedic normal at left
             with ease
             "After whispering sweet nothings in his ear, you use every ounce of lust in your body that you learned from Hereshey to please the devil in ways that would make even the most hardened criminal cringe."
             "At the moment of his climax and ultimate weakness, you smash his skull with one of the burning coals."
+            scene bg black with dissolve
             "A deafening shriek echoes into what seems like an eternity and you wake up to the sound of a paramedic."
             paramedic "Welcome back buddy, that was a close call!"
             mc "Whaa, whaat happened?"
@@ -577,10 +556,12 @@ label start:
             show satan normal at bigLeft
             with ease
             "Recalling everything you have learned about software piracy to achieve treachery, you decide to give the devil a taste of his own medicine."
-            mc "Hey D-man, wanna try out my game it's called [insert our game's name here].  It won first prize in this 72-hour game competition that I can't quite remember the name of!"
+            mc "Hey D-man, wanna try out my game? It's called \"How I Learned to Stop Breathing and Start Sinning\". It won first prize in this 72-hour game competition that I can't quite remember the name of!"
             satan "Oooh, sounds tantalizing - yes indeed!"
             "You load up the game and while the devil is distracted during the annoying mini-game you kick his chair and he rolls away, falling into a lazarus pit to be trapped for eternity."
+            show satan dead at bigLeft
             mc "[pname] wins, flawless victory!"
+            scene bg black with dissolve
             "Waking up in a cold sweat you realize it was all just a dream. You look in the mirror and see a fresh burn mark on your neck in the shape of a paper clip. Or was it??"
         "Wrath: Join forces with the devil to embark on an unholy quest.":
             show mc normal at right
@@ -599,10 +580,7 @@ label start:
 
 label heaven_fraud:
     $ renpy.save("autosave")
-    hide mc
-    hide satan
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Heaven"
@@ -631,11 +609,19 @@ label heaven_fraud:
     satan "Here, you do it - my conscience is dirty enough already!"
     "You raise the dagger and prepare to strike with all your might."
 
-    show god angry at left
+    show mc normal flipped at leftish
+    show god angry flipped at right
+    with dissolve
+    
     "God senses your presence and a lightning bolt strikes you in the anus so hard you feel it tingle your brain. The bolt arcs and strikes the devil directly in the kiwis."
     satan "Ay, ay, ay, no me gusta!"
     god "I WIN, DIVINE VICTORY!"
     "The devastating force hurls both you and the devil back into the Hellevator, which promptly plunges back to the bottom level of hell."
+    scene bg black
+    show mc normal at right
+    show satan normal at left
+    with dissolve
+
     "You look over at the devil who is still clutching his cojones."
     mc "Looks like it's just you and me buddy."
     "You take a bite of your Kit Kat width-wise and settle in for an eternity in hell."
@@ -644,10 +630,7 @@ label heaven_fraud:
 
 label heaven_wrath:
     $ renpy.save("autosave")
-    hide mc
-    hide satan
-    scene bg black
-    with dissolve
+    scene bg black with dissolve
     play sound elevatorOpen
     window hide
     centered "Heaven"
@@ -661,7 +644,7 @@ label heaven_wrath:
     play music heaven
     play sound elevatorDing
     scene bg heaven
-    show mc normal at right 
+    show mc normal at right
     show lust normal at left
     with dissolve
 
@@ -670,25 +653,36 @@ label heaven_wrath:
     lust "oooh domination hehe"
     "You feel the Hellevator rapidly ascending and suddenly smash the emergency stop button."
 
-    show satan normal at bigLeft with dissolve
+    show satan normal at bigLeft
+    show lust normal at leftish
+    with dissolve
     satan "What the hell are you doing?"
     mc "I just realized, we forgot something!"
 
-    show heresy normal at left with dissolve
+    show heresy normal at rightish with dissolve
+    
     heresy "You're right, silly us - we forgot gluttony! We certainly can't do this on an empty stomach!"
     "You press the hot-dog shaped button to go to the gluttony level."
     "The door opens and gluttony snorts."
-
-    show gluttony normal at left with dissolve
+    
+    show gluttony normal flipped at righter
+    show heresy normal at center
+    show mc normal at rightish
+    with dissolve
+    
     gluttony "Let's get it on like donkey kong!"
     "As gluttony steps into the elevator the doors close but feel uneasy for some reason."
     "You hear the unmistakable sound of wires fraying and ripping apart."
     "Looking up at the max weight limit you instantly realize the weight of your error."
     "The Hellevator cable snaps like a twig and sends the unholy group of avengers plummetting to the deepest level of hell."
     "Completely destroyed, the Hellevator has escorted its last passengers to the depths of hell."
+    scene bg black with dissolve
     "You wake up amongst the wreckage and realize lust is directly ontop of you"
     
-    show lust normal at left with dissolve
+    show lust normal at left
+    show mc normal at right
+    with dissolve
+
     "Lust smiles and winks at you."
     mc "Well, at least I won't be lonely!"
 
