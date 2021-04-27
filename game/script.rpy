@@ -113,10 +113,6 @@ label start:
     lust "We're all out of the XXL model, this pandemic has seen a surge in the urge if you know what I mean!"  
     "She slams the phone down and greets you in a sultry voice."
     lust "What can I do for you honey?  Is it getting hot in here or is it just me?  I have some really interesting new content that looks like it might just fit you well!"  
-    "She presents a stack of 4 different magazines on the desk infront of you."
-    lust "Choose your poison, you nasty little freak!" 
-
-
     "She presents a stack of 4 different magazines on the desk infront of you." #These could be used to depict the 4 choices as well (content of the magazines)
     lust "Choose your poison, you nasty little freak!"
     "You slowly spread them out and get an unsettling feeling when you realize the pages are sticky. You carefully inspect the covers: (\"Fun with Buns\", \"Deep 'n' Cheep\", \"Blowin' for Owin\", and \"Smokey or Chokey BBQ\"). How shall you proceed?"
@@ -151,7 +147,7 @@ label start:
             "Debt is not something that is easily erased.  Where there's a will there's a way, anything to avoid that edicktion notice!"
             jump gameOver
             
-    lust "You have good taste sweetie... you know what, I'll give you a reward."
+    lust "You have good taste sweetie... you know what, I'll give you a reward. She leads you to the back room."
 
     scene bg lust with fade
     show mc lust at right
@@ -209,7 +205,7 @@ label start:
             with ease
             "A fond memory of the riches you earned scalping video cards during a pandemic makes you feel warm and juicy inside."
         "Spring rolls: No ingredients are listed but strangely enough there is a music note.":
-            play sound rickroll
+            play music rickroll noloop
             show mc gluttony at right
             show gluttony normal at left
             with ease
@@ -309,7 +305,7 @@ label start:
             with ease
             "You locate a garden hose and irrigate the hell out of the other vines until they die. Have things gotten better or worse?"
             jump gameOver
-        "Quest 2:  A pesky squirrel has been chewing on grape nuts. Make him a memory.":
+        "Quest 2:  A pesky squirrel has been chewing on Grapes' nuts. Make him a memory.":
             show mc wrath at right
             show wrath normal at left
             with ease

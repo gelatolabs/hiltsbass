@@ -37,16 +37,16 @@ The Gelato Labs "G-Team" for LD48:\n\n
 {i}Kyle Farwell (kfarwell){/i}\n\n
 
 {b}Art:{/b}\n
-{i}Fuugul{/i}, {i}Matthew Petry (fireTwoOneNine){/i}\n\n
+{i}fooglemx{/i}, {i}Matthew Petry (fireTwoOneNine){/i}\n\n
 
 {b}Music:{/b}\n
 {i}Alice Dalton (Aliciana){/i}\n\n
 
-{b}Sound:{/b}\n
+{b}SFX:{/b}\n
 {i}Matthew Petry (fireTwoOneNine){/i}\n\n
 
 {b}Writing:{/b}\n
-{i}Kyle Farwell (kfarwell), Phil St. Antoine (Squid), Ryan Refcio{/i}
+{i}Ryan Refcio, Phil St. Antoine (Squid), Kyle Farwell (kfarwell), Jared Kelly{/i}
 
 """)
 

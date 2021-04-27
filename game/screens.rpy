@@ -600,6 +600,8 @@ screen about():
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
+            text _("\nNew Tegomin font copyright (c) Kousuke Nagai\nBrazier Flame font copyright (c) Walter E Stewart\nThis Font Software is licensed under the SIL Open Font License, Version 1.1, which can be found {a=http://scripts.sil.org/OFL}here{/a}.")
+
 
 style about_label is gui_label
 style about_label_text is gui_label_text
