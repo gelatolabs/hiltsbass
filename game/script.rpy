@@ -96,7 +96,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 1
-    call elevator
+    call elevator from _call_elevator
 
     scene bg black
     play music lust
@@ -165,7 +165,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 2
-    call elevator
+    call elevator from _call_elevator_1
 
     scene bg black
     play music gluttony
@@ -220,7 +220,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 3
-    call elevator
+    call elevator from _call_elevator_2
 
     scene bg black
     play music greed_intro noloop
@@ -277,7 +277,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 4
-    call elevator
+    call elevator from _call_elevator_3
 
     scene bg black
     play music wrath
@@ -390,7 +390,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 6
-    call elevator
+    call elevator from _call_elevator_4
 
     scene bg black
     play music violence
@@ -449,7 +449,7 @@ label start:
     "The Hellevator is under attack!"
 
     $ level = 7
-    call elevator
+    call elevator from _call_elevator_5
 
     scene bg black
     play music fraud
@@ -591,7 +591,7 @@ label heaven_fraud:
     "The Hellevator is under attack!"
 
     $ level = 9
-    call elevator
+    call elevator from _call_elevator_6
 
     scene bg black
     play music heaven
@@ -641,7 +641,7 @@ label heaven_wrath:
     "The Hellevator is under attack!"
 
     $ level = 9
-    call elevator
+    call elevator from _call_elevator_7
 
     scene bg black
     play music heaven
